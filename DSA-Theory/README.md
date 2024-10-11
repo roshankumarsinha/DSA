@@ -52,8 +52,7 @@
         <li>Bitwise NOT => (~) Inverts the bits of the number (turns 0 into 1 and 1 into 0). Example : ~5(0000 0101) = -6(1111 1010). ~(+ve num) = (-ve num+1) </li>
         <li>Left Shift => (<<) Shifts the bits of the number to the left by a specified number of positions. Each left shift by 1 is equivalent to multiplying the number by 2. Example: 5(0000 0101) << 1 = 10(0000 1010) </li>
         <li>Right Shift => (>>) Shifts the bits of the number to the right by a specified number of positions. Each right shift by 1 is equivalent to dividing the number by 2. Example: 5(0000 0101) >> 1 = 2(0000 0010) </li>
-        <li>Some Tips regarding bit manipulation:-
-            <ol>
+        Some Tips regarding bit manipulation:-
                 - **Bit Masking:**Bitwise operators are commonly used to manipulate specific bits in a number, also known as bit masking.Example: To check if the 3rd bit (from the right) of a number is 1:
                 ```cpp
                 int num = 5;   // 0101 in binary
@@ -85,5 +84,3 @@
                 int multiply = x << 3;  // Equivalent to 4 * 2^3 = 32
                 int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2 
                 </li>
-            </ol>
-        </li>
