@@ -65,29 +65,26 @@
                 }
                 </li>
                 <li><b>Swapping Numbers:</b>XOR can be used to swap two numbers without using a temporary variable:
-                ```
+                ```cpp
                 int a = 5, b = 3;
                 a = a ^ b;  // a becomes 6 (5 ^ 3)
                 b = a ^ b;  // b becomes 5 (6 ^ 3)
                 a = a ^ b;  // a becomes 3 (6 ^ 5)
                 // Now a = 3, b = 5
-                ```
                 </li>
                 <li><b>Checking if a Number is Even or Odd:</b>Use bitwise AND with 1 to check if the least significant bit is 1 (odd) or 0 (even):
-                ```
+                ```cpp
                 if (num & 1) {
                     cout << "Odd" << endl;
                 } else {
                     cout << "Even" << endl;
-                }
-                ```                
+                }               
                 </li>
                 <li><b>Efficient Multiplication/Division by Powers of 2:</b>You can multiply a number by 2^k using a left shift (<< k) and divide it by 2^k using a right shift (>> k):
-                ```
+                ```cpp
                 int x = 4;
                 int multiply = x << 3;  // Equivalent to 4 * 2^3 = 32
-                int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
-                ```
+                int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2 
                 </li>
             </ol>
         </li>
