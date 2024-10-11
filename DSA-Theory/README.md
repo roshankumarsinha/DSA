@@ -55,13 +55,14 @@
         <li>Some Tips regarding bit manipulation:-
             <ol>
                 <li><b>Bit Masking:</b>Bitwise operators are commonly used to manipulate specific bits in a number, also known as bit masking.Example: To check if the 3rd bit (from the right) of a number is 1:
-```int num = 5;   // 0101 in binary
+                ```cpp
+                int num = 5;   // 0101 in binary
                 int mask = 4;  // Create a mask where only the 3rd bit is 1 (0100)
                 if (num & mask) {
                     cout << "3rd bit is set." << endl;
                 } else {
                     cout << "3rd bit is not set." << endl;
-}```
+                }
                 </li>
                 <li><b>Swapping Numbers:</b>XOR can be used to swap two numbers without using a temporary variable:
                 ```
