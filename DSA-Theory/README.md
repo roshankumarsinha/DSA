@@ -55,37 +55,40 @@
         <li>Some Tips regarding bit manipulation:-
             <ol>
                 <li><b>Bit Masking:</b>Bitwise operators are commonly used to manipulate specific bits in a number, also known as bit masking.Example: To check if the 3rd bit (from the right) of a number is 1:
-                <pre><code>
-                int num = 5;   // 0101 in binary
-                int mask = 4;  // Create a mask where only the 3rd bit is 1 (0100)
-                if (num & mask) {
-                    cout << "3rd bit is set." << endl;
-                } else {
-                    cout << "3rd bit is not set." << endl;
-                }
-                </code></pre>
+<pre><code>
+int num = 5;   // 0101 in binary
+int mask = 4;  // Create a mask where only the 3rd bit is 1 (0100)
+if (num & mask) {
+    cout << "3rd bit is set." << endl;
+} else {
+    cout << "3rd bit is not set." << endl;
+}
+</code></pre>
                 </li>
                 <li><b>Swapping Numbers:</b>XOR can be used to swap two numbers without using a temporary variable:
-                ```cpp
-                int a = 5, b = 3;
-                a = a ^ b;  // a becomes 6 (5 ^ 3)
-                b = a ^ b;  // b becomes 5 (6 ^ 3)
-                a = a ^ b;  // a becomes 3 (6 ^ 5)
-                // Now a = 3, b = 5
+<pre><code>
+int a = 5, b = 3;
+a = a ^ b;  // a becomes 6 (5 ^ 3)
+b = a ^ b;  // b becomes 5 (6 ^ 3)
+a = a ^ b;  // a becomes 3 (6 ^ 5)
+// Now a = 3, b = 5
+</code></pre>
                 </li>
                 <li><b>Checking if a Number is Even or Odd:</b>Use bitwise AND with 1 to check if the least significant bit is 1 (odd) or 0 (even):
-                ```cpp
-                if (num & 1) {
-                    cout << "Odd" << endl;
-                } else {
-                    cout << "Even" << endl;
-                }               
+<pre><code>
+if (num & 1) {
+    cout << "Odd" << endl;
+} else {
+    cout << "Even" << endl;
+}               
+</code></pre>
                 </li>
                 <li><b>Efficient Multiplication/Division by Powers of 2:</b>You can multiply a number by 2^k using a left shift (<< k) and divide it by 2^k using a right shift (>> k):
-                ```cpp
-                int x = 4;
-                int multiply = x << 3;  // Equivalent to 4 * 2^3 = 32
-                int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2 
+<pre><code>
+int x = 4;
+int multiply = x << 3;  // Equivalent to 4 * 2^3 = 32
+int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
+</code></pre>
                 </li>
             </ol>
         </li>
