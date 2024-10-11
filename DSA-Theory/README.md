@@ -52,10 +52,10 @@
         <li>Bitwise NOT => (~) Inverts the bits of the number (turns 0 into 1 and 1 into 0). Example : ~5(0000 0101) = -6(1111 1010). ~(+ve num) = (-ve num+1) </li>
         <li>Left Shift => (<<) Shifts the bits of the number to the left by a specified number of positions. Each left shift by 1 is equivalent to multiplying the number by 2. Example: 5(0000 0101) << 1 = 10(0000 1010) </li>
         <li>Right Shift => (>>) Shifts the bits of the number to the right by a specified number of positions. Each right shift by 1 is equivalent to dividing the number by 2. Example: 5(0000 0101) >> 1 = 2(0000 0010) </li>
-    </ol>
-        Some Tips regarding bit manipulation:-
-                - **Bit Masking:**Bitwise operators are commonly used to manipulate specific bits in a number, also known as bit masking.Example: To check if the 3rd bit (from the right) of a number is 1:
-                ```cpp
+        <li>Some Tips regarding bit manipulation:-
+            <ol>
+                <li><b>Bit Masking:</b>Bitwise operators are commonly used to manipulate specific bits in a number, also known as bit masking.Example: To check if the 3rd bit (from the right) of a number is 1:
+                <pre><code>
                 int num = 5;   // 0101 in binary
                 int mask = 4;  // Create a mask where only the 3rd bit is 1 (0100)
                 if (num & mask) {
@@ -63,7 +63,9 @@
                 } else {
                     cout << "3rd bit is not set." << endl;
                 }
-                <!-- <li><b>Swapping Numbers:</b>XOR can be used to swap two numbers without using a temporary variable:
+                </code></pre>
+                </li>
+                <li><b>Swapping Numbers:</b>XOR can be used to swap two numbers without using a temporary variable:
                 ```cpp
                 int a = 5, b = 3;
                 a = a ^ b;  // a becomes 6 (5 ^ 3)
@@ -84,4 +86,6 @@
                 int x = 4;
                 int multiply = x << 3;  // Equivalent to 4 * 2^3 = 32
                 int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2 
-                </li> -->
+                </li>
+            </ol>
+        </li>
