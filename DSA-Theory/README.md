@@ -54,7 +54,7 @@
         <li>Right Shift => (>>) Shifts the bits of the number to the right by a specified number of positions. Each right shift by 1 is equivalent to dividing the number by 2. Example: 5(0000 0101) >> 1 = 2(0000 0010) </li>
         <li>Some Tips regarding bit manipulation:-
             <ol>
-                <li><b>Bit Masking:</b>Bitwise operators are commonly used to manipulate specific bits in a number, also known as bit masking.Example: To check if the 3rd bit (from the right) of a number is 1:
+                - **Bit Masking:**Bitwise operators are commonly used to manipulate specific bits in a number, also known as bit masking.Example: To check if the 3rd bit (from the right) of a number is 1:
                 ```cpp
                 int num = 5;   // 0101 in binary
                 int mask = 4;  // Create a mask where only the 3rd bit is 1 (0100)
@@ -63,7 +63,6 @@
                 } else {
                     cout << "3rd bit is not set." << endl;
                 }
-                </li>
                 <li><b>Swapping Numbers:</b>XOR can be used to swap two numbers without using a temporary variable:
                 ```cpp
                 int a = 5, b = 3;
