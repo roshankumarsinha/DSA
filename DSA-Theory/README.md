@@ -92,3 +92,55 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                 </li>
             </ol>
         </li>
+        <h1>Some basic Knowledge :</h1>
+        <ol>
+            <li>+ve Infinity is denoted by INT_MAX and -ve Infinity is denoted by INT_MIN</li>
+            <li>If you want to calculate length of array than, sizeof(arrayName) / sizeof(int)</li>
+            <li>We can't perform any operations on Array</li>
+            <li>Arrays are automatically passed by reference by default</li>
+        </ol>
+        <h1>Knowledge on Vectors :</h1>
+        <ol>
+            <li>Vector is included using a header
+                <pre><code>#include <vector></code></pre>
+            </li>
+            <li>vector is Declared using :
+                <pre><code>
+                    vector<int> v; // This will create a vector of int type
+                    vector<int> v(5); // This will create a vector of int type with size 5
+                    vector<int> v(5, 10); // This will create a vector of int type with size 5 and all elements will be 10
+                    vector<int> v{1, 2, 3, 4, 5}; // This will create a vector of int type with size 5 and elements will be 1, 2, 3, 4, 5
+                </code></pre>
+            </li>
+            <li>You can loop vector with iterator also:
+                <pre><code>
+                    vector<int> v{1, 2, 3, 4, 5};
+                    for (int value: v) {
+                        cout << value << " ";   // Output will be 1 2 3 4 5, where value will be v[0], v[1], v[2], v[3], v[4]
+                    }
+                </code></pre>
+            </li>
+            <li>Some Functions related to vector :
+                <pre><code>
+                    vector<int> v{1, 2, 3, 4, 5};
+                    v.push_back(6); // This will add 6 at the end of vector
+                    v.pop_back(); // This will remove last element from vector
+                    v.size(); // This will return size of vector. The number of elements currently stored in the vector.
+                    v.empty(); // This will return true if vector is empty else false
+                    v.clear(); // This will remove all elements from vector
+                    v.front(); // This will return first element of vector
+                    v.back(); // This will return last element of vector
+                    v.at(2); // This will return element at index 2
+                    v.insert(v.begin() + 2, 10); // This will insert 10 at index 2
+                    v.erase(v.begin() + 2); // This will remove element at index 2
+                    v.erase(v.begin() + 2, v.begin() + 4); // This will remove elements from index 2 to 4
+                    v.resize(10); // This will resize vector to 10
+                    v.resize(10, 5); // This will resize vector to 10 and all elements will be 5
+                    v.capacity(); // The total amount of memory allocated, which may be more than the number of elements.
+                </code></pre>
+            </li>
+            <li>Use g++ -std=c++11  test.cpp && ./a.out command if it uses stl library</li>
+            <li>Array has static allocation, which means it is created at complile time, where vector has dynamic allocation , which means it is created at run time.</li>
+            <li>Static allocation is done in stack memory, where dynamic allocation is done in heap memory.</li>
+            <li><b>How vector gets memory :</b> When we create a vector, it will allocate some memory. If we add more elements than it's capacity than it will double the memory and copy all elements to new memory and delete old memory. A vector stores its elements in contiguous memory locations, similar to arrays. This allows direct access to elements using an index.</li>
+        </ol>
