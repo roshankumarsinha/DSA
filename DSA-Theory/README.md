@@ -27,7 +27,7 @@
         <li>Logical Operators => &&, ||, !</li>
         <li>Increment/Decrement(Unary) Operators => ++, --</li>
     </ol>
-<h1>To Execute C++ code in VS code use ```g++ filename.cpp && ./a.out```</h1>
+<h1>To Execute C++ code in VS code use <pre><code>g++ filename.cpp && ./a.out</code></pre></h1>
 <h1>Tips to solve Pattern Problems :-</h1>
     <ol>
         <li>Always try to solve pattern problems by breaking it into smaller parts.</li>
@@ -102,7 +102,7 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
         <h1>Knowledge on Vectors :</h1>
         <ol>
             <li>Vector is included using a header
-                <pre><code>#include <vector></code></pre>
+                <pre><code>#include <<vector>></code></pre>
             </li>
             <li>vector is Declared using :
                 <pre><code>
@@ -139,7 +139,7 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                     v.capacity(); // The total amount of memory allocated, which may be more than the number of elements.
                 </code></pre>
             </li>
-            <li>Use g++ -std=c++11  test.cpp && ./a.out command if it uses stl library</li>
+            <li>Use <b>g++ -std=c++11  test.cpp && ./a.out</b> command if it uses stl library</li>
             <li>Array has static allocation, which means it is created at complile time, where vector has dynamic allocation , which means it is created at run time.</li>
             <li>Static allocation is done in stack memory, where dynamic allocation is done in heap memory.</li>
             <li><b>How vector gets memory :</b> When we create a vector, it will allocate some memory. If we add more elements than it's capacity than it will double the memory and copy all elements to new memory and delete old memory. A vector stores its elements in contiguous memory locations, similar to arrays. This allows direct access to elements using an index.</li>
