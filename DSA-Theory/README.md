@@ -102,7 +102,7 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
         <h1>Knowledge on Vectors :</h1>
         <ol>
             <li>Vector is included using a header
-                <pre><code>#include <<vector>></code></pre>
+                <pre><code>#include <,vector,>  //You can ignore the ,,</code></pre>
             </li>
             <li>vector is Declared using :
                 <pre><code>
