@@ -164,6 +164,94 @@
                     cout << &a; // This will print address of a
                 </code></pre>
             </li>
+            <li>Pointer is declared using (*). Example:
+                <pre><code>
+                    int a = 10;
+                    int* p = &a; // This will create a pointer p which will store address of a
+                    cout << p; // This will print address of a
+                    cout << &a: // This will print address of a. It will be same as p
+                </code></pre>
+            </li>
+            <li>We are defining type for pointer because, when address is created along with it some meta-deta is also created like how much bytes are used and for that we need to assign type for pointers.</li>
+            <li>We can make pointer to pointer, which stores address of pointer. Example:
+                <pre><code>
+                    int a = 10;
+                    int* p = &a;
+                    int** q = &p; // This will create a pointer q which will store address of p. This is called pointer to pointer
+                    cout << q; // This will print address of p
+                    cout << &p: // This will print address of p. It will be same as q
+                </code></pre>
+            </li>
+            <li>We have dereferencing operator (*), which is used to give value inside a memory address. Example:
+                <pre><code>
+                    int a = 10;
+                    int* p = &a;
+                    cout << *p; // This will print value of a
+                    cout << *(&a); // This will print value of a. It will be same as *p
+                </code></pre>
+            </li>
+            <li><b>Null Pointer :</b>It's a pointer which is not pointing to any memory address, it doesn't point to any valid memory location. You can't dereferenced a null pointer, since it doesn't point to any valid address. Example:
+                <pre><code>
+                    int* p = nullptr; // This will create a null pointer
+                </code></pre>
+            </li>
+            <li>Pass by reference is done in 2 ways :
+                <ol>
+                    <li>Using Pointers:
+                        <pre><code>
+                            void increment(int* p) {
+                                *p = *p + 1;
+                            }
+                            int main() {
+                                int a = 10;
+                                increment(&a);
+                                cout << a; // This will print 11
+                            }
+                        </code></pre>
+                    </li>
+                    <li>Using Reference Variable:
+                        <pre><code>
+                            void increment(int &p) {    // Here & is used to pass by reference, it creates an alias for the variable
+                                p = p + 1;
+                            }
+                            int main() {
+                                int a = 10;
+                                increment(a);
+                                cout << a; // This will print 11
+                            }
+                        </code></pre>
+                    </li>
+                </ol>
+            </li>
+            <li>When we create an array, the array is stored as pointer. Example:
+                <pre><code>
+                    int a[5] = {1, 2, 3, 4, 5};
+                    cout << a; // This will print address of a and it is called array pointer. Array pointer is a pointer which stores address of first element of array and it is a constant pointer
+                </code></pre>
+            </li>
+            <li>Pointer Arithmetic:
+                <ol>
+                    <li>When we add 1 to pointer than it will move to next memory location. Example:
+                        <pre><code>
+                            int a = 10;
+                            int* p = &a;
+                            cout << p; // This will print address of a. If address of a is 1000 than it will print 1000
+                            p = p + 1; // This will move pointer to next memory location, and increment pointer by 4 bytes because it's int pointer
+                            cout << p; // This will print address of next memory location. If address of a is 1000 than it will print 1004. Same goes for subtraction as well
+                        </code></pre>
+                    </li>
+                    <li>When we subtract 2 pointers than it will give difference between 2 pointers. Example:
+                        <pre><code>
+                            int a = 10; // Assume address of a is 1000
+                            int b = 20; // Assume address of b is 1004
+                            int* p = &a;
+                            int* q = &b;
+                            cout << q - p; // This will print 1. It will give difference between 2 pointers. If p is at 1000 and q is at 1004 than difference will be 1(which is 4 bytes)
+                        </code></pre>
+                    </li>
+                    <li>Addition of 2 pointers is not allowed</li>
+                </ol>
+            </li>
         </ol>
 </body>
 </html>
