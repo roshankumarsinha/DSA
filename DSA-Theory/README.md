@@ -274,8 +274,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                 </ul>
                 <pre>
                     <code>
-                        #include <deque>    // Include deque header
-                        deque<int> dq = {1, 2, 3, 4, 5};    // Create a deque
+                        #include <.deque.>    // Include deque header. Dot is added just to render it on Markdown
+                        deque<.int.> dq = {1, 2, 3, 4, 5};    // Create a deque
                         for (int i = 0; i < dq.size(); i++) {
                             dq[i] = dq[i] + 1;    // Increment each element by 1
                             cout << dq[i] << " ";    // Output will be 2 3 4 5 6
@@ -315,8 +315,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                         insert() - This will insert element at specific position. It takes 2 arguments, first is iterator and second is value. Example:
                         <pre>
                             <code>
-                                #include <list>    // Include list header
-                                list<int> l = {1, 2, 3, 4, 5};    // Create a list
+                                #include <.list.>    // Include list header
+                                list<.int.> l = {1, 2, 3, 4, 5};    // Create a list
                                 l.insert(l.begin(), 10);    // Insert 10 at beginning
                                 for(auto i = l.begin(); i != l.end(); i++) {
                                     cout << *i << " ";    // Output will be 10 1 2 3 4 5
@@ -327,8 +327,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                 </ul>
                 <pre>
                     <code>
-                        #include <list>    // Include list header
-                        list<int> l = {1, 2, 3, 4, 5};    // Create a list
+                        #include <.list.>    // Include list header
+                        list<.int.> l = {1, 2, 3, 4, 5};    // Create a list
                         for(auto i = l.begin(); i != l.end(); i++) {    // You can't use traditional for loop, as list doesn't support random access like vector. You can use for each loop also
                             *i = *i + 1;    // Increment each element by 1
                             cout << *i << " ";    // Output will be 2 3 4 5 6
@@ -349,8 +349,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             </ul>
             <pre>
                 <code>
-                    #include <stack>    // Include stack header
-                    stack<int> s;    // Create a stack
+                    #include <.stack.>    // Include stack header
+                    stack<.int.> s;    // Create a stack
                     s.push(1);    // Add 1 at top
                     s.push(2);    // Add 2 at top
                     s.push(3);    // Add 3 at top
@@ -373,8 +373,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             </ul>
             <pre>
                 <code>
-                    #include <queue>    // Include queue header
-                    queue<int> q;    // Create a queue
+                    #include <.queue.>    // Include queue header
+                    queue<.int.> q;    // Create a queue
                     q.push(1);    // Add 1 at back
                     q.push(2);    // Add 2 at back
                     q.push(3);    // Add 3 at back
@@ -405,8 +405,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             </ul>
             <pre>
                 <code>
-                    #include <queue>    // Include queue header
-                    priority_queue<int> pq;    // Create a priority queue, with max-heap, which means it will return greatest element, To make it min-heap use priority_queue<int, vector<int>, greater<int>> pq;
+                    #include <.queue.>    // Include queue header
+                    priority_queue<.int.> pq;    // Create a priority queue, with max-heap, which means it will return greatest element, To make it min-heap use priority_queue<.int., vector<.int.>, greater<.int.>> pq;
                     pq.push(1);    // Add 1 in queue
                     pq.push(2);    // Add 2 in queue
                     pq.push(3);    // Add 3 in queue
