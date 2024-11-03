@@ -249,3 +249,170 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                 </ol>
             </li>
         </ol>
+         <h1>Double Ended Queue :</h1>
+        <ol>
+            <li>Double-ended queues are sequence containers with the feature of expansion and contraction on both ends. They are similar to vectors, but are more efficient in case of insertion and deletion of elements. Unlike vectors, contiguous storage allocation may not be guaranteed.</li>
+            <li>The functions for deque are same as vector, with an addition of push and pop operations for both front and back.</li>
+            <li>Time Complexity for doing various operations on deques are :-
+                <ul>
+                    <li>Insertion or Deletion at front/back - O(1)</li>
+                    <li>Insertion/Deletion in middle - O(n)</li>
+                    <li>Accessing element - O(1)</li>
+                </ul>
+            </li>
+            <li>Various methods for deque :-
+                <ul>
+                    <li>push_front() - This will add element at front</li>
+                    <li>push_back() - This will add element at back</li>
+                    <li>pop_front() - This will remove element from front</li>
+                    <li>pop_back() - This will remove element from back</li>
+                    <li>front() - This will return first element</li>
+                    <li>back() - This will return last element</li>
+                    <li>size() - This will return size of deque</li>
+                    <li>empty() - This will return true if deque is empty else false</li>
+                    <li>clear() - This will remove all elements from deque</li>
+                </ul>
+                <pre>
+                    <code>
+                        #include <deque>    // Include deque header
+                        deque<int> dq = {1, 2, 3, 4, 5};    // Create a deque
+                        for (int i = 0; i < dq.size(); i++) {
+                            dq[i] = dq[i] + 1;    // Increment each element by 1
+                            cout << dq[i] << " ";    // Output will be 2 3 4 5 6
+                        }
+                    </code>
+                </pre>
+            </li>
+        </ol>
+        <h1>List :-</h1>
+        <ol>
+            <li>Lists are sequence containers that allow non-contiguous memory allocation. As compared to the vector, the list has slow traversal, but once a position has been found, insertion and deletion are quick (constant time).</li>
+            <li>List is nothing but a doubly linked list.</li>
+            <li>Unlike vectors, a list does not support random access, meaning you cannot directly jump to a specific index, or access elements by index numbers.</li>
+            <li>Time Complexity for doing various operations on List are :-
+                <ul>
+                    <li>Insertion or Deletion at front/back - O(1)</li>
+                    <li>Insertion/Deletion in middle - O(1). Since it is kind of doubly linked list, but keep in mind if you need to traverse to that element than it becomes O(N)</li>
+                    <li>Accessing element - O(n). Because you need to traverse whole list</li>
+                </ul>
+            </li>
+            <li>Various methods for list :-
+                <ul>
+                    <li>push_front() - This will add element at front</li>
+                    <li>push_back() - This will add element at back</li>
+                    <li>pop_front() - This will remove element from front</li>
+                    <li>pop_back() - This will remove element from back</li>
+                    <li>front() - This will return first element</li>
+                    <li>back() - This will return last element</li>
+                    <li>size() - This will return size of list</li>
+                    <li>empty() - This will return true if list is empty else false</li>
+                    <li>clear() - This will remove all elements from list</li>
+                    <li>erase() - This will remove element at specific position</li>
+                    <li>remove() - This will remove all elements with specific value</li>
+                    <li>reverse() - This will reverse the list</li>
+                    <li>sort() - This will sort the list</li>
+                    <li>
+                        insert() - This will insert element at specific position. It takes 2 arguments, first is iterator and second is value. Example:
+                        <pre>
+                            <code>
+                                #include <list>    // Include list header
+                                list<int> l = {1, 2, 3, 4, 5};    // Create a list
+                                l.insert(l.begin(), 10);    // Insert 10 at beginning
+                                for(auto i = l.begin(); i != l.end(); i++) {
+                                    cout << *i << " ";    // Output will be 10 1 2 3 4 5
+                                }
+                            </code>
+                        </pre>
+                    </li>
+                </ul>
+                <pre>
+                    <code>
+                        #include <list>    // Include list header
+                        list<int> l = {1, 2, 3, 4, 5};    // Create a list
+                        for(auto i = l.begin(); i != l.end(); i++) {    // You can't use traditional for loop, as list doesn't support random access like vector. You can use for each loop also
+                            *i = *i + 1;    // Increment each element by 1
+                            cout << *i << " ";    // Output will be 2 3 4 5 6
+                        }
+                    </code>
+                </pre>
+            </li>
+        </ol>
+        <h1>Stack :-</h1>
+        <li>Unlike vectors, elements in the stack are not accessed by index numbers. Since elements are added and removed from the top, you can only access the element at the top of the stack.</li>
+        <li>Various methods for stack :-
+            <ul>
+                <li>push() - This will add element at top</li>
+                <li>pop() - This will remove element from top</li>
+                <li>top() - This will return top element</li>
+                <li>size() - This will return size of stack</li>
+                <li>empty() - This will return true if stack is empty else false</li>
+            </ul>
+            <pre>
+                <code>
+                    #include <stack>    // Include stack header
+                    stack<int> s;    // Create a stack
+                    s.push(1);    // Add 1 at top
+                    s.push(2);    // Add 2 at top
+                    s.push(3);    // Add 3 at top
+                    cout << s.top();    // This will print 3
+                    s.pop();    // Remove 3 from top
+                    cout << s.top();    // This will print 2
+                </code>
+            </pre>
+        </li>
+        <h1>Queue :-</h1>
+        <li>Unlike vectors, elements in the queue are not accessed by index numbers. Since elements are added at the back and removed from the front, you can only access the element at the front of the queue.</li>
+        <li>Various methods for queue :-
+            <ul>
+                <li>push() - This will add element at back</li>
+                <li>pop() - This will remove element from front</li>
+                <li>front() - This will return front element</li>
+                <li>back() - This will return back element</li>
+                <li>size() - This will return size of queue</li>
+                <li>empty() - This will return true if queue is empty else false</li>
+            </ul>
+            <pre>
+                <code>
+                    #include <queue>    // Include queue header
+                    queue<int> q;    // Create a queue
+                    q.push(1);    // Add 1 at back
+                    q.push(2);    // Add 2 at back
+                    q.push(3);    // Add 3 at back
+                    cout << q.front();    // This will print 1
+                    q.pop();    // Remove 1 from front
+                    cout << q.front();    // This will print 2
+                </code>
+            </pre>
+        </li>
+        <h1>Priority Queue :-</h1>
+        <li>First element of the queue is either the greatest or the smallest of all elements in the queue, and elements are in non-increasing or non-decreasing order.</li>
+        <li>Priority queues are built on the top of the max heap and min heap</li>
+        <li>By default is returns greatest element in queue, but you cam change it to smallest as well.</li>
+        <li>Time Complexityof various operations for Priority Queue :-
+            <ul>
+                <li>Insertion - O(logN)</li>
+                <li>Deletion - O(logN)</li>
+                <li>Accessing element - O(1)</li>
+            </ul>
+        </li>
+        <li>Various methods in Priority Queue :-
+            <ul>
+                <li>push() - This will add element in queue</li>
+                <li>pop() - This will remove element from queue, remove from front</li>
+                <li>top() - This will return top element</li>
+                <li>size() - This will return size of queue</li>
+                <li>empty() - This will return true if queue is empty else false</li>
+            </ul>
+            <pre>
+                <code>
+                    #include <queue>    // Include queue header
+                    priority_queue<int> pq;    // Create a priority queue, with max-heap, which means it will return greatest element, To make it min-heap use priority_queue<int, vector<int>, greater<int>> pq;
+                    pq.push(1);    // Add 1 in queue
+                    pq.push(2);    // Add 2 in queue
+                    pq.push(3);    // Add 3 in queue
+                    cout << pq.top();    // This will print 3
+                    pq.pop();    // Remove 3 from queue
+                    cout << pq.top();    // This will print 2
+                </code>
+            </pre>
+        </li>

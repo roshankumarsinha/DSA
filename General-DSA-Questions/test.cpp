@@ -1,14 +1,15 @@
 // Just to test some code
 
 #include <iostream>
-// #include <vector>
+#include<queue>
 using namespace std;
 
 int main() {
-    vector<int> v = {1, 2, 3, 4, 5};
-    for (int value : v) {
-        cout << value << " ";
-    }
-    
+    queue<int> q;
+    q.push(1);
+    q.push(2);
+    q.push(3);
+    q.push(4);
+    cout << q.front() << endl;
     return 0;
 }
