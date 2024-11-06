@@ -420,5 +420,120 @@
                 </code>
             </pre>
         </li>
+        <h1>Map in C++ :-</h1>
+        <li>Maps are associative containers that store elements in a mapped fashion. Each element has a key value and a mapped value. No two mapped values can have same key values.</li>
+        <li>Automatically sorted in ascending order by their keys.</li>
+        <li>map is typically implemented as a balanced binary search tree (often a Red-Black Tree), which means that the operations have logarithmic time complexity.</li>
+        <li>To store element in descending order use something like :-
+            <pre>
+                <code>
+                    map<.int, int, greater<.int>> m;    // This will store elements in descending order
+                </code>
+            </pre>
+        </li>
+        <li>Time complexity of variour operations :-
+            <ul>
+                <li>Insertion - O(logN)</li>
+                <li>Deletion - O(logN)</li>
+                <li>Accessing element - O(logN)</li>
+                <li>Clearing all elements - O(N)</li>
+            </ul>
+        </li>
+        <li>Various methods in Map :-
+            <ul>
+                <li>Insert : Using []
+                    <pre>
+                        <code>
+                            #include <.map.>    // Include map header
+                            map<.int, string> m;    // Create a map
+                            m[1] = "abc";    // Insert 1 with value abc
+                            m[2] = "def";    // Insert 2 with value def
+                            m[3] = "ghi";    // Insert 3 with value ghi
+                            cout << m[2];    // This is accessing value of map
+                        </code>
+                    </pre>
+                </li>
+                <li>Accessing : Using []
+                    <pre>
+                        <code>
+                            cout << m[2];    // This is accessing value of map
+                        </code>
+                    </pre>
+                </li>
+                <li>Getting size:- size(): Returns the number of elements.</li>
+                <li>empty(): Checks if the map is empty.</li>
+                <li>clear(): Removes all elements.</li>
+                <li>erase(key): To remove specific elements from a map</li>
+                <li>count(key): Returns 1 if the key exists, otherwise 0.</li>
+                <li>Loop through map : Map can be looped through auto
+                    <pre>
+                        <code>
+                            map<.int, string> m;
+                            for(auto i: m) {
+                                cout << i.first << " " << i.second << endl;
+                            }
+                        </code>
+                    </pre>
+                </li>
+            </ul>
+        </li>
+        <h1>Unordered Map :-</h1>
+        <li> Unlike map, which is implemented as a balanced binary tree and keeps elements sorted by keys, unordered_map uses a hash table, so the elements are not stored in any specific order.</li>
+        <li>Time complexity of variour operations :-
+            <ul>
+                <li>Insertion - O(1)</li>
+                <li>Deletion - O(1)</li>
+                <li>Accessing element - O(1)</li>
+                <li>Clearing all elements - O(N)</li>
+            </ul>
+        </li>
+        <li>Most of the methods are similar to ordere map. Example :-
+            <pre>
+                <code>
+                    #include <.unordered_map>    // Include unordered_map header
+                    unordered_map<.int, string> m;    // Create a unordered_map
+                    m[1] = "abc";    // Insert 1 with value abc
+                    m[2] = "def";    // Insert 2 with value def
+                    m[3] = "ghi";    // Insert 3 with value ghi
+                    cout << m[2];    // This is accessing value of map
+                </code>
+            </pre>
+        </li>
+        <h1>Set :-</h1>
+        <li>Set is a container that stores unique elements following a specific order.</li>
+        <li>Set is similar to map, only difference is it stores unique elements in it.</li>
+        <li>In set you can't use []. You have to insert value using insert()</li>
+        <li>To access element in map either iterate on set or use count()</li>
+        <li>Similar, to map if you want to store elementin descending order use something like :-
+            <pre>
+                <code>
+                    set<.int, greater<.int>> s;    // This will store elements in descending order
+                </code>
+            </pre>
+        </li>
+        <li>Methods and time complexity are same as map. Example :-
+            <pre>
+                <code>
+                    #include <.set>    // Include set header
+                    set<.int> s;    // Create a set
+                    s.insert(1);    // Insert 1 in set
+                    s.insert(2);    // Insert 2 in set
+                    s.insert(3);    // Insert 3 in set
+                    cout << s.count(2);    // This will print 1
+                </code>
+            </pre>
+        </li>
+        <li>Similary, we have unoredred set, which almost same as unordered map. Example :-
+            <pre>
+                <code>
+                    #include <.unordered_set>    // Include unordered_set header
+                    unordered_set<.int> s;    // Create a unordered_set
+                    s.insert(1);    // Insert 1 in unordered_set
+                    s.insert(2);    // Insert 2 in unordered_set
+                    s.insert(3);    // Insert 3 in unordered_set
+                    cout << s.count(2);    // This will print 1
+                </code>
+            </pre>
+        </li>
 </body>
 </html>
