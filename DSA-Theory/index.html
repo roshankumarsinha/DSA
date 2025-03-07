@@ -681,6 +681,51 @@
                 </li>
             </ul>
         </li>
+        <h1>Tree :-</h1>
+        <li>Tree is a hierarchical data structure that consists of nodes connected by edges. A tree is a non-linear data structure commonly used in computer science for organizing and managing hierarchical data.</li>
+        <li>
+            <ul>
+                Key points about trees:
+                <li>Root: The topmost node in a tree.</li>
+                <li>Parent: A node that has child nodes.</li>
+                <li>Child: A node that has a parent node.</li>
+                <li>Leaf: A node that does not have any child nodes.</li>
+                <li>Sibling: Nodes that share the same parent.</li>
+                <li>Depth: The level of a node in the tree, starting from the root node. The depth of a node is the length of the path from the root to the node.</li>
+                <li>Height: The length of the longest path from a node to a leaf.</li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                Types of Trees:
+                <li>
+                    Binary Tree: A tree in which each node has at most two children.
+                    The structure will be like :-
+                    <pre>
+                        <code>
+                            struct Node {
+                                int data;
+                                Node* left;
+                                Node* right;
+                            };
+                        </code>
+                    </pre>
+                </li>
+                <li>Binary Search Tree (BST): A binary tree in which the left child of a node contains only nodes with keys less than the node's key, and the right child contains only nodes with keys greater than the node's key.</li>
+                <li>
+                    Non-Binary Trees: Trees that allow more than two children per node.
+                    The structure will be like :-
+                    <pre>
+                        <code>
+                            struct Node {
+                                int data;
+                                vector<Node*> children;
+                            };
+                        </code>
+                    </pre>
+                </li>
+            </ul>
+        </li>
 
 </body>
 </html>
