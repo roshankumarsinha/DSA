@@ -531,3 +531,206 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                 </code>
             </pre>
         </li>
+        <h1>Queue :-</h1>
+        <li>A queue in C++ is a linear data structure that follows the FIFO (First In, First Out) principle, meaning the element inserted first will be removed first.</li>
+        <li>The std::queue is implemented as an adapter container that uses another container (like std::deque by default) to store elements.</li>
+        <li>
+            Operations on Queue :-
+            <ul>
+                <li>push() - This will add element at back</li>
+                <li>pop() - This will remove element from front</li>
+                <li>front() - This will return front element</li>
+                <li>back() - This will return back element</li>
+                <li>size() - This will return size of queue</li>
+                <li>empty() - This will return true if queue is empty else false</li>
+            </ul>
+            <pre>
+                <code>
+                    #include <.queue>    // Include queue header
+                    queue<.int> q;    // Create a queue
+                    q.push(1);    // Add 1 at back
+                    q.push(2);    // Add 2 at back
+                    q.push(3);    // Add 3 at back
+                    cout << q.front();    // This will print 1
+                    q.pop();    // Remove 1 from front
+                    cout << q.front();    // This will print 2
+                    cout << q.back();    // This will print 3
+                    cout << q.size();    // This will print 2, as 1 is removed
+                    cout << q.empty();    // This will print 0, as queue is not empty
+                </code>
+            </pre>
+        </li>
+        <li>
+            <b>Dequeue :-</b>
+            Dequeue is a double-ended queue that allows insertion and deletion at both the front and back of the queue. It is similar to a queue, but with more flexibility.
+        </li>
+        <li>
+            Operations on Dequeue :-
+            <ul>
+                <li>push_front() - This will add element at front</li>
+                <li>push_back() - This will add element at back</li>
+                <li>pop_front() - This will remove element from front</li>
+                <li>pop_back() - This will remove element from back</li>
+                <li>front() - This will return front element</li>
+                <li>back() - This will return back element</li>
+                <li>size() - This will return size of dequeue</li>
+                <li>empty() - This will return true if dequeue is empty else false</li>
+            </ul>
+            <pre>
+                <code>
+                    #include <.deque>    // Include deque header
+                    deque<.int> dq;    // Create a dequeue
+                    dq.push_front(1);    // Add 1 at front
+                    dq.push_back(2);    // Add 2 at back
+                    dq.push_front(3);    // Add 3 at front
+                    cout << dq.front();    // This will print 3
+                    cout << dq.back();    // This will print 2
+                    dq.pop_front();    // Remove 3 from front
+                    cout << dq.front();    // This will print 1
+                    cout << dq.size();    // This will print 2
+                    cout << dq.empty();    // This will print 0
+                </code>
+            </pre>
+        </li>
+        <h1>HashMap :-</h1>
+        <li>The std::unordered_map provides an efficient way to store key-value pairs, with average-case O(1) complexity for lookup, insertion, and deletion operations. It uses a hash table under the hood.</li>
+        <li>
+            Key points about unordered_map:
+            <ul>
+                <li>The elements are not stored in any specific order.</li>
+                <li>Each key in the map must be unique.</li>
+                <li>The container uses a hash function to map keys to their corresponding values.</li>
+            </ul>
+        </li>
+        <li>How to use it :-
+            <pre>
+                <code>
+                    #include <.unordered_map>    // Include unordered_map header
+                    unordered_map<.string, int> myMap;    // Create a unordered_map
+                    // Insert elements
+                    myMap["apple"] = 3;
+                    myMap["banana"] = 5;
+                    myMap["cherry"] = 7;
+                    cout << myMap["banana"];    // Output: 5
+                    cout << myMap["unknown"];    // Output: 0, If key is not present than it will return 0
+                    cout << myMap.count("banana");    // Output: 1, If key is present than it will return 1
+                    cout << myMap.count("unknown");    // Output: 0, If key is not present than it will return 0. count is used to check if key is present or not
+                    // Erase elements
+                    myMap.erase("banana");    // Remove element with key "banana"
+                    cout << myMap.count("banana");    // Output: 0
+                    // Clear all elements
+                    myMap.clear();    // Remove all elements
+                    // Get the size of the map
+                    cout << myMap.size();    // Output: 0
+                    // Check if the map is empty
+                    cout << myMap.empty();    // Output: 1, If map is empty than it will return 1 else 0
+                    // Iterate over the map
+                    for (auto p : myMap) {
+                        cout << p.first << " " << p.second << endl;
+                    }
+                    // Iterate over the map using iterator
+                    for (auto it = myMap.begin(); it != myMap.end(); it++) {
+                        cout << it->first << " " << it->second << endl;
+                    }
+                    // Find an element
+                    auto it = myMap.find("apple");  // Find element with key "apple".
+                    if (it != myMap.end()) {   // We are checking myMap.end() because if element is not found than it will return myMap.end()
+                        cout << "Element si founf" << endl;
+                    } else {
+                        cout << "Element is not found" << endl;
+                    }
+                </code>
+            </pre>
+        </li>
+        <li>Ordered map is implemented as a self-balancing binary search tree, typically a Red-Black Tree. Lookup, insertion, and deletion operations have a time complexity of O(log n).</li>
+        <li>Ordered map is sorted in Ascending order by keys.</li>
+        <li>How HashMap is implemented :-
+            <ul>
+                <li>The HashMap uses an array (buckets) to store elements.</li>
+                <li>Each key is processed by a hash function to determine the index (bucket) where the corresponding value should be stored.</li>
+                <li>Hsah Function consists of 2 things :- <b>1. Hash Code</b> <b>2. Compression Function</b></li>
+                <li>The hash function converts a key into an integer (hash code) and maps it to a bucket index.</li>
+                <li>Compression Function: The compression function takes the hash code and maps it to a valid bucket index within the array. This is typically done using the modulo operator.</li>
+                <li>A hash code is a numerical value generated by a hash function that maps data (like strings, numbers, or objects) to a fixed-size integer.</li>
+            </ul>
+        </li>
+        <li><b>Collision in Hashing :-</b>
+            <ul>
+                <li>A collision occurs in a hash table when two different keys produce the same hash code and are therefore assigned to the same bucket.</li>
+                <li><b>Collision Resolution Techniques :-</b>1. Chaining (Open Hashing)   2. Open Addressing (Closed Hashing)</li>
+                <li><b>Open Hashing :- </b>In this approach, each bucket contains a linked list (or another dynamic data structure) of key-value pairs. When a collision occurs, the colliding elements are appended to the list at the corresponding bucket.</li>
+                <li><b>Closed Hashing :- </b>In this approach, if a collision occurs, the algorithm searches for the next available slot in the table (array) to store the key-value pair.</li>
+                <li>Several Techniques are used for finding next slots :-
+                    <ul>
+                        <li>Linear Probing : Search sequentially for the next empty bucket.</li>
+                        <li>Quadratic Probing : Search for the next empty bucket using a quadratic function.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <h1>Tree :-</h1>
+        <li>Tree is a hierarchical data structure that consists of nodes connected by edges. A tree is a non-linear data structure commonly used in computer science for organizing and managing hierarchical data.</li>
+        <li>
+            <ul>
+                Key points about trees:
+                <li>Root: The topmost node in a tree.</li>
+                <li>Parent: A node that has child nodes.</li>
+                <li>Child: A node that has a parent node.</li>
+                <li>Leaf: A node that does not have any child nodes.</li>
+                <li>Sibling: Nodes that share the same parent.</li>
+                <li>Depth: The level of a node in the tree, starting from the root node. The depth of a node is the length of the path from the root to the node.</li>
+                <li>Height: The length of the longest path from a node to a leaf.</li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                Types of Trees:
+                <li>
+                    Binary Tree: A tree in which each node has at most two children.
+                    The structure will be like :-
+                    <pre>
+                        <code>
+                            struct Node {
+                                int data;
+                                Node* left;
+                                Node* right;
+                            };
+                        </code>
+                    </pre>
+                </li>
+                <li>Binary Search Tree (BST): A binary tree in which the left child of a node contains only nodes with keys less than the node's key, and the right child contains only nodes with keys greater than the node's key.</li>
+                <li>
+                    Non-Binary Trees: Trees that allow more than two children per node.
+                    The structure will be like :-
+                    <pre>
+                        <code>
+                            struct Node {
+                                int data;
+                                vector<Node*> children;
+                            };
+                        </code>
+                    </pre>
+                </li>
+            </ul>
+        </li>
+        <h1>Binary Search Tree :-</h1>
+        <li>A Binary Search Tree (BST) is a special type of binary tree that maintains order among its elements, making searching, insertion, and deletion efficient.</li>
+        <li>
+            <ul>
+                Properties of a Binary Search Tree:
+                <li>Left Subtree Rule: All nodes in the left subtree of a node contain values less than the node’s value.</li>
+                <li>Right Subtree Rule: All nodes in the right subtree of a node contain values greater than the node’s value.</li>
+                <li>No Duplicates (in a standard BST): Each value must be unique.</li>
+            </ul>
+        </li>
+        <li>Inorder traversal of BST returns values in Sorted Order</li>
+        <li>
+            <ul>
+                Time Complexity of BST Operations:
+                <li>Search: O(log n) on average for complete binary tree, O(n) in the worst case for skewed binary tree.</li>
+                <li>Insertion: O(log n) on average for complete binary tree, O(n) in the worst case for skewed binary tree.</li>
+                <li>Deletion: O(log n) on average for complete binary tree, O(n) in the worst case for skewed binary tree.</li>
+                <li>For guaranteed efficiency, Self-Balancing BSTs like AVL trees or Red-Black trees are used.</li>
+            </ul>
+        </li>
+        <li>https://takeuforward.org/binary-search-tree/introduction-to-binary-search-trees/</li>
