@@ -747,6 +747,95 @@
             </ul>
         </li>
         <li>https://takeuforward.org/binary-search-tree/introduction-to-binary-search-trees/</li>
+        <h1>Heap :-</h1>
+        <li>A Heap is a binary tree-based data structure that satisfies the heap property.</li>
+        <li>
+            Heap Properties:
+            <ul>
+                <li><b>Complete Binary Tree: </b> All levels are fully filled except possibly the last, and it's filled from left to right.</li>
+                <li>
+                    <b>Max Heap: </b> Parent nodes are greater than or equal to their children. The maximum element is at the root.
+                    <pre>
+                        <code>
+                            10
+                           /  \
+                          8    9
+                         / \   / \
+                        7   6 5   4
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <b>Min Heap: </b> Parent nodes are less than or equal to their children. The minimum element is at the root.
+                    <pre>
+                        <code>
+                            1
+                           / \
+                          2   3
+                         / \ / \
+                        4  5 6  7
+                        </code>
+                    </pre>
+                </li>
+            </ul>
+        </li>
+        <li>Heaps are usually stored in arrays, not in tree/pointers</li>
+        <li>
+            For any node at index i: (if 0-based indexing is used)
+            <ul>
+                <li>Left Child: 2*i + 1</li>
+                <li>Right Child: 2*i + 2</li>
+                <li>Parent: (i - 1) / 2</li>
+            </ul>
+        </li>
+        <li>
+            For any node at index i: (if 1-based indexing is used)
+            <ul>
+                <li>Left Child: 2*i</li>
+                <li>Right Child: 2*i + 1</li>
+                <li>Parent: i / 2</li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                Time Complexity of Heap Operations:
+                <li>Insertion: O(log n)</li>
+                <li>Deletion: O(log n)</li>
+                <li>Accessing the root element: O(1)</li>
+            </ul>
+        </li>
+        <li>Heapify is used to maintain the heap property after insertion or deletion.</li>
+        <li>
+            For a complete binary tree:
+            <ul>
+                <li>For 0-based indexing: Leaf nodes are at index n/2 to n-1</li>
+                <li>For 1-based indexing: Leaf nodes are at index n/2 + 1 to n</li>
+            </ul>
+        </li>
+        <li>
+            Priority Queue will automatically create a heap for you, and you can use it as a heap.
+            <pre>
+                <code>
+                    #include <.queue>    // Include queue header
+                    priority_queue<.int> pq;    // Create a max-heap
+                    pq.push(1);    // Add 1 in heap
+                    pq.push(2);    // Add 2 in heap
+                    pq.push(3);    // Add 3 in heap
+                    cout << pq.top();    // This will print 3
+                </code>
+            </pre>
+            To create a min-heap, use the following code:
+            <pre>
+                <code>
+                    #include <.queue>    // Include queue header
+                    priority_queue<.int, vector<.int>, greater<.int>> pq;    // Create a min-heap
+                    pq.push(1);    // Add 1 in heap
+                    pq.push(2);    // Add 2 in heap
+                    pq.push(3);    // Add 3 in heap
+                    cout << pq.top();    // This will print 1
+                </code>
+            </pre>
+        </li>
 
 </body>
 </html>
