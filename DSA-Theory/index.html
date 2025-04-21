@@ -836,6 +836,33 @@
                 </code>
             </pre>
         </li>
+        <h1>Trie :-</h1>
+        <li>A Trie is a tree-based data structure used to efficiently store and retrieve keys in a dataset of strings. It is particularly effective when dealing with prefix-based searches, like autocomplete or dictionary word searches.</li>
+        <li>
+            <ul>
+                Key points about Trie:
+                <li>Each node in a Trie represents a character of a string.</li>
+                <li>The root node is empty, and each path from the root to a leaf node represents a word.</li>
+                <li>Each node can have multiple children, representing different characters.</li>
+                <li>Tries are often used for tasks like autocomplete, spell checking, search engines and IP routing.</li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                Time Complexity of Trie Operations:
+                <li>Insertion: O(m), where m is the length of the word being inserted.</li>
+                <li>Search: O(m), where m is the length of the word being searched.</li>
+                <li>Deletion: O(m), where m is the length of the word being deleted.</li>
+            </ul>
+        </li>
+        <li>
+            Properties of Trie:
+            Property	        Description
+              Nodes	        Each node represents a character in a string.
+              Root	        The starting point of the Trie (doesn’t hold a character itself).
+              Children	    An array/map of references to child nodes for each possible character.
+              isEndOfWord	A flag at each node marking whether a complete word ends at that node.
+        </li>
 
 </body>
 </html>
