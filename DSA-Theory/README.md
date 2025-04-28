@@ -867,3 +867,39 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                 </tr>
             </table>
         </li>
+        <h1>Graph :-</h1>
+        <li>A graph is a collection of nodes (or vertices) connected by edges. It is a non-linear data structure used to represent relationships between pairs of objects.</li>
+        <li>
+            <ul>
+                Key points about graphs:
+                <li>Vertices: The individual nodes in the graph.</li>
+                <li>Edges: The connections between the vertices.</li>
+                <li>Directed Graph: A graph where edges have a direction (from one vertex to another).</li>
+                <li>Undirected Graph: A graph where edges do not have a direction (the connection is bidirectional).</li>
+                <li>Weighted Graph: A graph where edges have weights or costs associated with them.</li>
+                <li>Unweighted Graph: A graph where edges do not have weights or you can assume that every node has weight 1.</li>
+                <li>Cyclic Graph: A graph that contains at least one cycle (a path that starts and ends at the same vertex).</li>
+                <li>Acyclic Graph: A graph that does not contain any cycles.</li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                Degrees of a Vertex:
+                <li>Degree: The number of edges connected to a vertex.</li>
+                <li>In-Degree: The number of incoming edges to a vertex (in directed graphs).</li>
+                <li>Out-Degree: The number of outgoing edges from a vertex (in directed graphs).</li>
+                <li>In directed graphs, Sum of in-degrees = Sum of out-degrees = Number of edges.</li>
+                <li>In undirected graphs, Sum of degrees = 2 * Number of edges.</li>
+            </ul>
+        </li>
+        <li>
+            We can represent graph in 2 ways:
+            <ul>
+                <li>Adjacency Matrix: A 2D array where the cell at row i and column j indicates whether there is an edge between vertex i and vertex j.</li>
+                <li>Adjacency List: An array of lists, where each list represents the vertices adjacent to a particular vertex.</li>
+                <li>Adjacency Matrix is used when the graph is dense, and Adjacency List is used when the graph is sparse.</li>
+            </ul>
+        </li>
+        <li>
+            You can find notes on graph in C++ here: <a href="https://takeuforward.org/graph/introduction-to-graph/">Graph in C++</a>
+        </li>
