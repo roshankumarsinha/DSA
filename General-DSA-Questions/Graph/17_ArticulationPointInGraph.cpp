@@ -17,6 +17,7 @@
 // 3. If the child is not a root node and has a back edge to any of the ancestors of the node, it is not an articulation point.
 
 // Notes link for Articulation Points in Graph: https://takeuforward.org/data-structure/articulation-point-in-graph-g-56/
+// Watch the video from "Take U Forward"
 
 
 #include <iostream>

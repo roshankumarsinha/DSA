@@ -45,6 +45,8 @@
 
 // Note: We are not considering the parent’s insertion time during calculating the lowest insertion time as we want to check if any other path from the node to the parent exists excluding the edge we intend to remove.
 
+// Watch the video from "Take U Forward"
+
 
 #include <iostream>
 #include <vector>

@@ -8,6 +8,7 @@
 // u is reachable from v and v is reachable from u.
 
 // Notes link for Strongly Connected Components: https://takeuforward.org/graph/strongly-connected-components-kosarajus-algorithm-g-54/
+// Watch the video from "Take U Forward"
 
 #include <iostream>
 #include <vector>
