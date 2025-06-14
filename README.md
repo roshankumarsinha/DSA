@@ -47,18 +47,19 @@ This repository contains all notes and code snippets with explanations of all th
 
 ```bash
 DSA/
-├── algorithms/
-│   ├── sorting/
-│   ├── searching/
-│   └── graphs/
-├── data_structures/
+├── DSA Theory/
+│   └── Theory Notes for all topics like Arrays, Strings, Linked Lists, Trees, Graphs, etc.
+├── DSA Question/
 │   ├── arrays/
 │   ├── linked_lists/
 │   ├── trees/
-│   └── stacks_queues/
-├── problems/
-│   ├── leetcode/
-│   ├── hackerrank/
-│   └── others/
-├── README.md
-└── LICENSE
+│   ├── stacks_queues/
+│   ├── Heap/
+│   ├── Tree/
+│   ├── Trie/
+│   ├── BST/
+│   └── Graph/
+└── Pattern Problem/
+    └── How to solve Pattern problems with examples/
+
+```
