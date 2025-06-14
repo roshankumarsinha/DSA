@@ -12,8 +12,7 @@ This repository contains all notes and code snippets with explanations of all th
 - [Tech Stack](#-tech-stack)
 - [Folder Structure](#-folder-structure)
 - [Getting Started](#-getting-started)
-- [Contributing](#-contributing)
-- [Author](#-author)
+- [Contact](#-contact)
 
 ---
 
@@ -63,3 +62,40 @@ DSA/
     └── How to solve Pattern problems with examples/
 
 ```
+
+## 🚀 Getting Started
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/roshankumarsinha/DSA.git
+   ```
+
+2. **Navigate to the directory**:
+   ```bash
+    cd General-DSA-Questions
+    ```
+
+3. **Open one of the code files**
+   - You can use any text editor or IDE (like VSCode, Code::Blocks, etc.) to open the code files.
+
+4. **Run the code**:
+   - Make sure you have a C++ compiler installed (like g++).
+   - Compile the code using:
+     ```bash
+     g++ -std=c++11 filename.cpp
+     ```
+   - Run the compiled code:
+     ```bash
+      ./a.out
+     ```
+  - You can also run both commands in one line:
+     ```bash
+     g++ -std=c++11 filename.cpp && ./a.out
+     ```
+
+## 📫 Contact
+If you have any questions, suggestions, or contributions, feel free to reach out:
+- **Email**: [roshankumarsinha321@gmail.com](mailto:roshankumarsinha321@gmail.com)
+- **LinkedIn**: [Roshan Sinha](https://www.linkedin.com/in/roshan-sinha-108510194/)
+- **Portfolio**: [Roshan Sinha](https://rs-portfolio-rouge.vercel.app/)
+- **Instagram**: [roshan.ku.sinha](https://www.instagram.com/roshan.ku.sinha/)
