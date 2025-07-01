@@ -903,3 +903,6 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
         <li>
             You can find notes on graph in C++ here: <a href="https://takeuforward.org/graph/introduction-to-graph/">Graph in C++</a>
         </li>
+        <li>
+            You can find custom notes using chatgpt here: <a href="https://chatgpt.com/share/684e7fc7-85ec-8006-87b0df7437dc1af5">Graph Implementation in C++</a>
+        </li>

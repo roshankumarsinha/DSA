@@ -29,6 +29,13 @@
 //    c.  If something now has all prerequisites done → it's ready → add to queue
 // 4. Keep repeating this till you’ve done everything
 
+// Intuition:
+// Instead of going deep like DFS, BFS topological sort removes nodes layer by layer starting with nodes that have no incoming edges.
+// No incoming edges means no dependencies left for that node and it is independent of any other node.
+// So, you can process it right now.
+// Think of it like:
+//  “What can I process right now that no one depends on anymore?”
+
 
 #include <iostream>
 #include <vector>

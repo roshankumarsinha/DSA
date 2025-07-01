@@ -8,7 +8,7 @@
 
 // Dijkstra algorithm can work with both directed and undirected graphs.
 
-// Notes link : https://takeuforward.org/data-structure/dijkstras-algorithm-using-set-g-33/
+// Notes link : https://takeuforward.org/data-structure/di_vjkstras-algorithm-using-set-g-33/
 
 // Approach:
 // 1. We would be using a set and a distance array of size V (where ‘V’ are the number of nodes in the graph)
@@ -27,6 +27,7 @@
 // That is, say we have a node that has been reached by two paths, one with a cost of 7 and another with a cost of say 9.
 // It is obvious that the path with a cost of 7 would be more optimal than the path with a cost of 9.
 // A set data structure in C++ always stores the elements in increasing order i.e., when we erase from a set, the smallest valued elements get erased first.
+// In C++, a set is a standard template library (STL) container that stores unique elements in a sorted order (by default, ascending). It's implemented as a balanced binary search tree (usually a Red-Black Tree).
 
 // So, we can use this property of the set to implement Dijkstra's Algorithm.
 // 6. We can also use a priority queue instead of a set to implement Dijkstra's Algorithm.
@@ -84,6 +85,8 @@ class Graph {
                 if (nodeDistance + edgeWeight < distance[neighborNode]) {
                     // Update the distance and insert it in the set
                     if (distance[neighborNode] != INT_MAX) {
+                        // Remove the old pair from the set if it exists and has a greater distance
+                        // Prevents processing the same node multiple times with worse paths
                         s.erase({distance[neighborNode], neighborNode}); // Remove the old pair from the set
                     }
                     distance[neighborNode] = nodeDistance + edgeWeight; // Update the distance

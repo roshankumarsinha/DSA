@@ -10,7 +10,7 @@
 
 #include <iostream>
 #include <vector>
-#include <algorithm>
+#include <algorithm>    // This is needed for the sort function
 using namespace std;
 
 // Disjoint Set class to manage the connected components using union by size

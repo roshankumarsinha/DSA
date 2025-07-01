@@ -15,7 +15,7 @@
 
 // Priority Queue(Min Heap): The priority queue will be storing the pairs (edge weight, node).
 // We can start from any given node. Here we are going to start from node 0 and so we will initialize the priority queue with (0, 0).
-// If we wish to store the mst of the graph, the priority queue should instead store the triplets (edge weight, adjacent node, parent node) and in that case, we will initialize with (0, 0, -1).
+// If we wish to store the mst of the graph, the priority queue should instead store the triplets (edge weight, node, parent node) and in that case, we will initialize with (0, 0, -1).
 
 // Visited array: All the nodes will be initially marked as unvisited.
 

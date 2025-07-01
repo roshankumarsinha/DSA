@@ -19,6 +19,13 @@
 // 3 → 1
 // so, 5 comes before 0, 4 comes before 0, 2 comes before 3, and 3 comes before 1.
 
+// Assume we have 3 tasks: u, v, w
+// Topological sort given is : u → v → w
+// This means:
+// 1. Task u must be completed before task v
+// 2. Task v must be completed before task w    
+// Which implies: Task v is dependent on task u, and task w is dependent on task v and task u is independent.
+
 // We can find Topological sort only if there's no cycle in the graph because if there's a cycle, we can't have a linear ordering because if there is cycle, we will have edge from 1 to 2, 2 to 3, and 3 to 1, so we can't have a linear ordering.
 // We can find Topological sort only if it is a Directed Graph because in an undirected graph, we can't have a linear ordering because there's a edge from 1 to 2 and 2 to 1, so we can't have a linear ordering.
 
@@ -33,6 +40,12 @@
 // 1. You only push a node to the result after exploring all its dependencies
 // 2. So by the time you push u, you’ve already handled everything that should come after it
 // 3. This naturally gives the topological order when you reverse the finish times.
+
+// Intuition:
+// “A task must come after all the tasks it depends on.”
+// So during DFS:
+//  You go as deep as possible before finishing a node.
+//  You record a node only after exploring all nodes it points to (i.e., its dependencies).
 
 
 #include <iostream>

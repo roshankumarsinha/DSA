@@ -1,4 +1,4 @@
-// Write a function to find shortest path from source to destination in a directed graph.
+// Write a function to find shortest path from source to destination in a undirected graph.
 // Given an Undirected Graph having unit weight, find the shortest path from the source to all other nodes in this graph.
 
 // Notes link : https://takeuforward.org/data-structure/shortest-path-in-undirected-graph-with-unit-distance-g-28/

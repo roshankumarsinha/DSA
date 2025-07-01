@@ -84,6 +84,37 @@ class Graph {
         // Traverse all its neighbors
         for (int neighbor : adjList[node]) {
             if (!visited[neighbor]) { // If neighbor is not visited
+                // 🧠 Why do we need:
+                // if (dfs(neighbor, visited, pathVisited)) {
+                //     return true;
+                // }
+                // Because:
+                //     We need to propagate the detection of a cycle from the deeper recursion back to the top caller.
+                //     Once any recursive call finds a cycle (dfs(neighbor) returns true), there is no point in checking further; we can exit early.
+                //     Without this check, you would continue traversing other paths and miss the opportunity to short-circuit once a cycle is found.
+
+
+                
+                // We need to return true if we find a cycle :
+                // Consider the graph (0 → 1 → 2 → 0) with 3 nodes. It forms a cycle.
+                    //  dfs(0)
+                    //   visited[0] = true
+                    //   pathVisited[0] = true
+                    //   neighbor = 1
+                    //     dfs(1)
+                    //       visited[1] = true
+                    //       pathVisited[1] = true
+                    //       neighbor = 2
+                    //         dfs(2)
+                    //           visited[2] = true
+                    //           pathVisited[2] = true
+                    //           neighbor = 0
+                    //             visited[0] == true && pathVisited[0] == true
+                    //             → CYCLE DETECTED → return true
+                    //         dfs(2) returns true
+                    //     dfs(1) returns true
+                    //   dfs(0) returns true
+
                 if (dfs(neighbor, visited, pathVisited)) { // Recursively call DFS on the neighbor
                     return true; // Cycle detected
                 }
