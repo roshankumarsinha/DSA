@@ -100,7 +100,7 @@ class Trie {
         TrieNode* node = root;
 
         // Traverse the Trie until we find a node with more than one child or isEndOfWord
-        while (node && node->childCount == 1 && !node->isEndOfWord) {
+        while (node && node->childCount == 1 && !node->isEndOfWord) {   // Continue unitl there is no nullptr or only one child or not end of word
             // Find the only child node
             for (int i = 0; i < ALPHABET_SIZE; ++i) {
                 if (node->children[i]) {

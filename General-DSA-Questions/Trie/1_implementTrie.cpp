@@ -1,5 +1,7 @@
 // Write a program to implement a trie data structure in C++.
 
+// Notes link : https://takeuforward.org/data-structure/implement-trie-1/
+
 // Approach for Insertion :
 // 1. Start from the root node, which is an empty node.
 // 2. For each character in the word, check if the corresponding child node exists.
