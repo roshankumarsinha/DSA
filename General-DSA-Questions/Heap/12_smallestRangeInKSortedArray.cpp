@@ -64,7 +64,7 @@
 // 4. Try to improve the range by replacing the min element with the next element from the same array
 // 5. Stop when any one of the arrays is exhausted
 // 6. Return the smallest range
-// 7. Time Complexity: O(N * log K) for inserting and extracting elements from the heap.
+// 7. Time Complexity: O(N log K) for inserting N elements into the min-heap, where K is the number of arrays. Each insertion takes O(log K) time.
 // 8. Space Complexity: O(K) for storing the k elements in the min-heap.
 
 #include <iostream>

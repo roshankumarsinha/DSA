@@ -57,6 +57,10 @@ void heapify(int* arr, int n, int i) {
     // If largest is not root, swap and continue heapifying
     if (largest != i) {
         swap(arr[i], arr[largest]);
+        // We do recursive call to heapify the affected subtree
+        // This is because we have swapped the largest element with the root, so we need to
+        // ensure that the subtree rooted at the largest index also maintains the max-heap property.
+        // This is necessary to ensure that the entire tree maintains the max-heap property.
         heapify(arr, n, largest); // Recursively heapify the affected subtree
     }
 }

@@ -13,7 +13,7 @@
 // ✨ Why Two Heaps?
 // 1. All numbers in max heap are less than or equal to all numbers in min heap
 // 2. The size of heaps is balanced so the median can be:
-//    a.  Top of max heap (if odd number of elements)
+//    a.  Top of max heap (if odd number of elements). We are assuming maxHeap will always have more elements than minHeap or they will be equal in size.
 //    b.  Average of tops of both heaps (if even number)
 
 //            Invariant                              |                   Maintains
