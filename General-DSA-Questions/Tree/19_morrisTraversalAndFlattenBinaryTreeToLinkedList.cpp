@@ -85,7 +85,7 @@ public:
                 // find the predecessor (rightmost node
                 // in the left subtree)
                 TreeNode* prev = cur->left;
-                while (prev->right && prev->right != cur) {
+                while (prev->right && prev->right != cur) {   // Traverse to the rightmost node
                     prev = prev->right;
                 }
                 

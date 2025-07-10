@@ -77,9 +77,11 @@ vector<int> verticalTraversal(Node* root) {
     }
   }
 
-  for (auto it : nodes) {
-    for (auto itr : it.second) {
-      for (int val : itr.second) {
+  cout << "Nodes in the map : " << endl;
+
+  for (auto it : nodes) {   // Iterate through the map, it is a pair of horizontal distance and a map of depth and vector of nodes
+    for (auto itr : it.second) {  // Iterate through the map of depth and vector of nodes
+      for (int val : itr.second) {  // Iterate through the vector of nodes at that horizontal distance and depth
         result.push_back(val);   // Push the nodes to the result vector
       }
     }

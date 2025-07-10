@@ -1,4 +1,5 @@
 // Write a function to find the path from root to a given node in a binary tree.
+// This is important question because this can be used several places where we need to find a target node. So, if we have a path stored in vector to target node, we can use that path for various purposes like finding the lowest common ancestor, finding the distance between two nodes, etc.
 
 // Notes : https://takeuforward.org/data-structure/print-root-to-node-path-in-a-binary-tree/
 
