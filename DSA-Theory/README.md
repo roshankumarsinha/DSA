@@ -713,6 +713,12 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                 </li>
             </ul>
         </li>
+        <li>
+            You can find notes on Trees here: <a href="https://takeuforward.org/binary-tree/introduction-to-trees/">Tree Data Structure</a>
+        </li>
+        <li>
+            You can find custom notes using ChatGpt on Trees here: <a href="https://chatgpt.com/share/686b5897-c4cc-8006-9a1d-5496571273bb">Tree Data Structure</a>
+        </li>
         <h1>Binary Search Tree :-</h1>
         <li>A Binary Search Tree (BST) is a special type of binary tree that maintains order among its elements, making searching, insertion, and deletion efficient.</li>
         <li>
