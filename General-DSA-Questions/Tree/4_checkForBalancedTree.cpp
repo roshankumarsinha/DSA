@@ -1,4 +1,5 @@
 // Write a function to check if a binary tree is balanced or not.
+// Notes : https://takeuforward.org/data-structure/check-if-the-binary-tree-is-balanced-binary-tree/
 // A Balanced Binary Tree is a tree in which the height difference between the left and right subtrees of any node is at most 1.
 
 // Approach 1 : Recursive Approach
@@ -124,3 +125,89 @@ int main() {
     }
     return 0;
 }
+
+// Better solution is :-
+// Approach 3 : Optimized Approach (DFS) - Using Global Variable
+// #include <iostream>
+// #include <algorithm>
+
+// using namespace std;
+
+// // Definition for a binary tree node
+// struct Node {
+//     int data;
+//     Node* left;
+//     Node* right;
+
+//     Node(int val) : data(val), left(nullptr), right(nullptr) {}
+// };
+
+// class Solution {
+// public:
+//     // Helper function returns height if subtree is balanced, else -1
+//     int checkHeight(Node* node) {
+//         if (node == nullptr)
+//             return 0;
+
+//         // Check height of left subtree
+//         int leftHeight = checkHeight(node->left);
+//         if (leftHeight == -1)
+//             return -1; // Left subtree is not balanced, so we have to pass -1 up the call stack
+
+//         // Check height of right subtree
+//         int rightHeight = checkHeight(node->right);
+//         if (rightHeight == -1)
+//             return -1; // Right subtree is not balanced, so we have to pass -1 up the call stack
+
+//         // If height difference is more than 1, tree is unbalanced
+//         if (abs(leftHeight - rightHeight) > 1)
+//             return -1;
+
+//         // Return height if balanced
+//         return 1 + max(leftHeight, rightHeight);
+//     }
+
+//     // Main function to check if the tree is balanced
+//     bool isBalanced(Node* root) {
+//         return checkHeight(root) != -1;  // If checkHeight returns -1, tree is unbalanced else it will return the height and it is balanced
+//     }
+// };
+
+// int main() {
+//     /*
+//         Construct this tree:
+
+//                 1
+//                / \
+//               2   3
+//              /
+//             4
+//            /
+//           5
+
+//         This tree is unbalanced because the left subtree is much deeper.
+//     */
+
+//     Node* root = new Node(1);
+//     root->left = new Node(2);
+//     root->right = new Node(3);
+//     root->left->left = new Node(4);
+//     root->left->left->left = new Node(5);
+
+//     Solution sol;
+//     bool balanced = sol.isBalanced(root);
+
+//     if (balanced)
+//         cout << "The binary tree is balanced." << endl;
+//     else
+//         cout << "The binary tree is NOT balanced." << endl;
+
+//     // Clean up memory
+//     delete root->left->left->left;
+//     delete root->left->left;
+//     delete root->left;
+//     delete root->right;
+//     delete root;
+
+//     return 0;
+// }

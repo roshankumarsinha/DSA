@@ -2,6 +2,7 @@
 // Height of a binary tree is the number of edges in the longest path from the root node to the leaf node.
 
 // Approach 1 : Recursive Approach (DFS)
+// Notes for Height of Binary Tree using DFS : https://takeuforward.org/data-structure/maximum-depth-of-a-binary-tree/
 // 1. If the tree is empty (root is nullptr), return 0.
 // 2. Recursively calculate the height of the left subtree.
 // 3. Recursively calculate the height of the right subtree.

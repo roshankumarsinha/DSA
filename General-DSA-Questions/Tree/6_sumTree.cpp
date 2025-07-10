@@ -78,3 +78,125 @@ int main() {
   }
   return 0;
 }
+
+// Better solution is :-
+// Approach 2 : Optimized Approach (DFS) - Using Global Variable
+// #include <iostream>
+
+// using namespace std;
+
+// // Definition for a binary tree node
+// struct Node {
+//     int data;
+//     Node* left;
+//     Node* right;
+
+//     Node(int val) : data(val), left(nullptr), right(nullptr) {}
+// };
+
+// class Solution {
+// public:
+//     // Helper function that returns:
+//     //   - sum of subtree rooted at current node, if subtree is a Sum Tree
+//     //   - -1 if subtree is not a Sum Tree
+//     int checkSumTree(Node* node) {
+//         if (node == nullptr)
+//             return 0;
+
+//         // Leaf node
+//         if (node->left == nullptr && node->right == nullptr)
+//             return node->data;
+
+//         // Recursively get sums of left subtrees
+//         int leftSum = checkSumTree(node->left);
+
+//         If left subtree is invalid, propagate failure
+//         if (leftSum == -1)
+//             return -1;
+
+//         Recursively get sums of right subtrees
+//         int rightSum = checkSumTree(node->right);
+
+//         If right subtree is invalid, propagate failure
+//         if (rightSum == -1)
+//             return -1;   // Propagate failure -1 up the call stack
+
+//         // Check the Sum Tree condition
+//         if (node->data != leftSum + rightSum)
+//             return -1;
+
+//         // Return total sum including this node
+//         return node->data + leftSum + rightSum;
+//     }
+
+//     bool isSumTree(Node* root) {
+//         return checkSumTree(root) != -1;
+//     }
+// };
+
+// int main() {
+//     /*
+//         Example Tree:
+//                 26
+//                /  \
+//              10    3
+//             / \     \
+//            4   6     3
+
+//         This is a Sum Tree because:
+//         - 10 = 4 + 6
+//         - 3 = 0 + 3
+//         - 26 = 10 + 3 + (10's children) + (3's children)
+//                = 10 + 3 + 4 + 6 + 3
+//                = 26 (including children sums twice)
+        
+//         BUT actually in standard Sum Tree definitions, the sum of subtree is total sum of *all nodes below*.
+//         So to match the simpler convention, we can define:
+//         - Node's data = sum of *immediate* left and right subtree data.
+//         So in this convention:
+//         - For node 26:
+//             leftSum = 10
+//             rightSum = 3
+//             10 + 3 = 13 != 26, so it's not a Sum Tree.
+        
+//         **Alternate simpler convention:**
+//         Node value = sum of left subtree total sum + right subtree total sum.
+//         So, in that convention, to avoid confusion, here's a clearer code:
+        
+//         A simpler, commonly used Sum Tree definition is:
+//         - For non-leaf node:
+//             node.data = sum of values of all nodes in left + right subtree.
+        
+//         So, we modify helper to return total sum as:
+//         totalSum = node.data * 2
+//         for non-leaf node.
+        
+//         **We will use this simpler definition below.**
+//     */
+
+//     // Build the example tree matching that definition:
+//     Node* root = new Node(26);
+//     root->left = new Node(10);
+//     root->right = new Node(3);
+//     root->left->left = new Node(4);
+//     root->left->right = new Node(6);
+//     root->right->right = new Node(3);
+
+//     Solution sol;
+//     bool isSum = sol.isSumTree(root);
+
+//     if (isSum)
+//         cout << "The binary tree is a Sum Tree." << endl;
+//     else
+//         cout << "The binary tree is NOT a Sum Tree." << endl;
+
+//     // Clean up memory
+//     delete root->left->left;
+//     delete root->left->right;
+//     delete root->left;
+//     delete root->right->right;
+//     delete root->right;
+//     delete root;
+
+//     return 0;
+// }

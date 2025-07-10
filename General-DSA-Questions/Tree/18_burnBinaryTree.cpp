@@ -21,23 +21,23 @@
 
 // Approach:
 // We can solve this problem in 3 steps:
-// 1. Create a map to store the parent of each node. Find parent of each node (so we can traverse both up and down the tree).
+// 1. Create a map to store the parent of each node. Find parent of each node (so we can traverse left, right and up).
 // 2. Find the target node in tree.
 // 3. Perform a level order traversal starting from the target node to find the time taken to burn the entire tree.
 
 // Step 1: Build Parent Mapping
-//    a.  Perform a DFS (or BFS) traversal to store each node’s parent in a hash map (unordered_map<Node*, Node*>). This can give parent in O(1) time.
+//    a.  Perform a BFS traversal to store each node’s parent in a hash map (unordered_map<Node*, Node*>). This can give parent in O(1) time.
 //    b.  We can combine the Step 2 as well and find the target node in the same traversal.
 
 // Step 3: Level Order Traversal to find minimum time to burn the tree
 //   a.  Start with the target node and add it to the queue.
 //   b.  Keep track of the time taken to burn the tree.
-//   c. Track visited note using a map. Something like map<Node*, bool> visited. We are keeping track of visited nodes to avoid visiting the same node again.
+//   c. Track visited node using a map. Something like map<Node*, bool> visited. We are keeping track of visited nodes to avoid visiting the same node again.
 //   d.  While the queue is not empty, perform the following steps:
 //       i.  Get the front element of the queue.
 //       ii. If the left child is not visited, add it to the queue and mark it as visited.
 //       iii. If the right child is not visited, add it to the queue and mark it as visited.
-//       iv. If the parent is not visited, add it to the queue and mark it as visited.
+//       iv. If the parent(up) is not visited, add it to the queue and mark it as visited.
 //       v.  Increment the time taken to burn the tree. If something is added to the queue, increment the time.
 //   e.  Return the time taken to burn the tree.
 
@@ -99,8 +99,8 @@ int burnTree(Node* root, unordered_map<Node*, Node*> &parent) {
     int time = 0;  // To store the time taken to burn the tree
 
     while(!q.empty()) {
-      bool flag = false;  // To check if any node is added to the queue
-      int levelSize = q.size();  // Number of nodes at the current level
+      bool flag = false;  // To check if any node is added to the queue or not, if not added, then we don't need to increment the time
+      int levelSize = q.size();  // Number of nodes at the current level, so we can process all nodes at the same time for the current time step
       for (int i = 0; i < levelSize; i++) {
         Node* current = q.front();  // Get the current node
         q.pop();
@@ -127,7 +127,7 @@ int burnTree(Node* root, unordered_map<Node*, Node*> &parent) {
         }
       }
 
-      // Increment the time taken to burn the tree
+      // Increment the time taken to burn the tree, if any node is added to the queue
       if (flag) {
         time++;
       }

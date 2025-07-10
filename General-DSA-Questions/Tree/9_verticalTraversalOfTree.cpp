@@ -1,4 +1,5 @@
 // Write a function to perform vertical traversal of a binary tree.
+// Notes : https://takeuforward.org/data-structure/vertical-order-traversal-of-binary-tree/
 // In vertical order traversal, we group the nodes column-wise from left to right. Nodes in the same column are ordered top to bottom.
 //    Nodes at the same vertical level but different depths are arranged from top to bottom.
 //    If two nodes have the same vertical level and depth, they are arranged from left to right.

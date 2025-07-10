@@ -1,4 +1,5 @@
 // Write a function to check if two binary trees are identical or not.
+// Notes : https://takeuforward.org/data-structure/check-if-two-trees-are-identical/
 // Two binary trees are considered identical if they have the same structure and the same node values.
 
 // Approach : Recursive Approach

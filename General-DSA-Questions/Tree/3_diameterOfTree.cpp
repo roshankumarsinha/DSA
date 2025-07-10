@@ -6,7 +6,7 @@
 //     2   3
 //    / \  / \
 //   4   5 6  7
-// Diameter of the tree is 4.
+// Diameter of the tree is 5. (If we are considering nodes as part of diameter. But if we are considering edges as part of diameter then diameter will be 4.)
 
 // Approach 1 : Recursive Approach (DFS)
 // The diameter of a tree T is the largest of the following quantities:
@@ -119,3 +119,88 @@ int main() {
     cout << "Diameter of the Tree (Optimized): " << result.second << endl;
     return 0;
 }
+
+// Better solution is :-
+// Approach 3 : Optimized Approach (DFS) - Using Global Variable
+// #include <iostream>
+// #include <algorithm>
+
+// using namespace std;
+
+// // Definition for a binary tree node
+// struct Node {
+//     int data;
+//     Node* left;
+//     Node* right;
+    
+//     Node(int val) : data(val), left(nullptr), right(nullptr) {}
+// };
+
+// class Solution {
+// public:
+//     // Variable to store the maximum diameter
+//     int diameter;
+
+//     Solution() {
+//         diameter = 0;
+//     }
+
+//     // Helper function to compute height and update diameter
+//     int height(Node* node) {
+//         if (node == nullptr)
+//             return 0;
+        
+//         // Recursively get height of left and right subtrees
+//         int leftHeight = height(node->left);
+//         int rightHeight = height(node->right);
+
+//         // Update the diameter if the path through this node is larger
+//         diameter = max(diameter, leftHeight + rightHeight);
+
+//         // Return height of this subtree
+//         return 1 + max(leftHeight, rightHeight);
+//     }
+
+//     // Function to get the diameter
+//     int diameterOfBinaryTree(Node* root) {
+//         diameter = 0;
+//         height(root);
+//         return diameter;
+//     }
+// };
+
+// int main() {
+//     /*
+//         Construct this binary tree:
+        
+//                 1
+//                / \
+//               2   3
+//              / \
+//             4   5
+//                /
+//               6
+//     */
+//     Node* root = new Node(1);
+//     root->left = new Node(2);
+//     root->right = new Node(3);
+//     root->left->left = new Node(4);
+//     root->left->right = new Node(5);
+//     root->left->right->left = new Node(6);
+
+//     Solution sol;
+//     int dia = sol.diameterOfBinaryTree(root);
+
+//     cout << "Diameter of the binary tree: " << dia << endl;
+
+//     // Clean up memory
+//     delete root->left->right->left;
+//     delete root->left->left;
+//     delete root->left->right;
+//     delete root->left;
+//     delete root->right;
+//     delete root;
+
+//     return 0;
+// }
+

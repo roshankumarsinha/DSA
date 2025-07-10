@@ -131,3 +131,6 @@ int main() {
   cout << endl;
   return 0;
 }
+
+// We can solve this problem using an iterative approach as well. Iterative approach is each to understand.
+// Approach: Iterative Approach : https://takeuforward.org/data-structure/boundary-traversal-of-a-binary-tree/

@@ -1,4 +1,5 @@
 // Create a Binary Tree
+// Creation of binary tree notes : https://takeuforward.org/binary-tree/binary-tree-representation-in-c/
 
 #include <iostream>
 #include <queue>
@@ -134,6 +135,8 @@ node* buildTreeFromLevelOrder(node* root) {
 }
 
 
+// Binary Tree Traversals Notes : https://takeuforward.org/binary-tree/binary-tree-traversal-inorder-preorder-postorder/
+
 // Level Order Traversal is also known as Breadth First Search (BFS)
 // In this traversal, we traverse the tree level by level
 // We use a queue to store the nodes of the tree
@@ -143,6 +146,7 @@ node* buildTreeFromLevelOrder(node* root) {
 // We repeat this process until the queue is empty
 // Time Complexity : O(N) where N is the number of nodes in the tree
 // Space Complexity : O(N) where N is the number of nodes in the tree
+// Level Order Traversal Notes : https://takeuforward.org/data-structure/level-order-traversal-of-a-binary-tree/
 void levelOrderTraversal(node* root) {
     if(root == NULL) {
         return;
@@ -193,6 +197,7 @@ void levelOrderTraversal(node* root) {
 //       / \  /
 //      7  11 17
 // InOrder Traversal : 7 3 11 1 17 5
+// InOrder Traversal Notes : https://takeuforward.org/data-structure/inorder-traversal-of-binary-tree/
 void inOrderTraversal(node* root) {
   // Base Case
   if(root == NULL) {
@@ -212,6 +217,7 @@ void inOrderTraversal(node* root) {
 //       / \  /
 //      7  11 17
 // PreOrder Traversal : 1 3 7 11 5 17
+// PreOrder Traversal Notes : https://takeuforward.org/data-structure/preorder-traversal-of-binary-tree/
 void preOrderTraversal(node* root) {
   // Base Case
     if(root == NULL) {
@@ -231,6 +237,7 @@ void preOrderTraversal(node* root) {
 //       / \  /
 //      7  11 17
 // PostOrder Traversal : 7 11 3 17 5 1
+// PostOrder Traversal Notes : https://takeuforward.org/data-structure/post-order-traversal-of-binary-tree/
 void postOrderTraversal(node* root) {
   // Base Case
     if(root == NULL) {
