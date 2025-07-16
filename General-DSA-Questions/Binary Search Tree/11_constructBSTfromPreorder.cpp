@@ -1,5 +1,7 @@
 // Write a function to construct a Binary Search Tree (BST) from a given preorder traversal.
 
+// Video from Striver: https://www.youtube.com/watch?v=UmJT3j26t1I
+
 // Approach 1:
 // 1. Sort the preorder array and this will give us the inorder traversal of the BST.
 // 2. We can construct any tree from inorder and preorder traversal.
@@ -12,6 +14,13 @@
 // 3. If the current node's value is within the bounds, create a new node and recursively construct the left and right subtrees.
 // 4. Time Complexity: O(N) for constructing the tree.
 // 5. Space Complexity: O(N) for storing the nodes in the stack during recursion.
+
+// It's not necessary to take lower bound as it is optional, we can work with just upper bound as well.
+
+// Intiution:
+// 1. The first element of the preorder traversal is always the root of the BST.
+// 2. The elements that come after the root in the preorder traversal can be divided into two parts: those that are less than the root (left subtree) and those that are greater than the root (right subtree).
+// 3. We can recursively apply this logic to construct the left and right subtrees until we have processed all elements in the preorder traversal.
 
 #include <iostream>
 #include <vector>
@@ -33,8 +42,8 @@ class Node {
 // Function to construct a BST from preorder traversal using upper and lower bounds
 Node* constructBSTFromPreorder(vector<int>& preorder, int& index, int lower, int upper) {  // preorder is the array of preorder traversal, index is the current index in the array, lower and upper are the bounds for the current node's value
     
-    if (index >= preorder.size()) {
-        return NULL;  // If the index is out of bounds, return NULL
+    if (index >= preorder.size()) { // If the index is greater than or equal to the size of the preorder array, return NULL
+        return NULL;
     }
 
     if (preorder[index] < lower || preorder[index] > upper) {

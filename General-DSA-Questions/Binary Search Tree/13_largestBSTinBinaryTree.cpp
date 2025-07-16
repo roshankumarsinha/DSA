@@ -1,4 +1,5 @@
 // Write a function to find largest BST in a binary tree.
+// Video from Striver: https://www.youtube.com/watch?v=X0oXMdtUDwo
 
 // The size of a BST is the number of nodes in the BST.
 // The largest BST in a binary tree is the largest subtree that is also a BST.

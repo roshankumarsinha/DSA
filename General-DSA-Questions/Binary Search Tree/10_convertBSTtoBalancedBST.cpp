@@ -8,6 +8,12 @@
 // 2. Build Balanced BST
 //    a.  Use the sorted array to build a balanced BST using the middle element as root recursively.
 
+// Intiution:
+// 1. The inorder traversal of a BST gives us the elements in sorted order.
+// 2. By using the middle element of the sorted array as the root, we ensure that the tree is balanced, as it divides the array into two halves.
+// 3. The left half will be smaller than the root so that will be the left subtree, and the right half will be greater than the root so that will be the right subtree, which is the essence of a balanced BST.
+// 4. Recursively applying this process to the left and right halves of the array will create a balanced BST.
+
 #include <iostream>
 #include <vector>
 using namespace std;
