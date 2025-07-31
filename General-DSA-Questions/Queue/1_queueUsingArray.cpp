@@ -10,11 +10,11 @@
 using namespace std;
 
 class Queue {
-private:
+  private:
     int arr[SIZE];
     int front, rear;
 
-public:
+  public:
     Queue() {
         front = rear = -1;
     }

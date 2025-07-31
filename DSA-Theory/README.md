@@ -391,6 +391,9 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                 </code>
             </pre>
         </li>
+        <li>
+            ChatGPT Notes : <a href="https://chatgpt.com/share/688b5c55-4168-8006-b1aa-27be9c3c690e">Click Here</a>
+        </li>
         <h1>Priority Queue :-</h1>
         <li>First element of the queue is either the greatest or the smallest of all elements in the queue, and elements are in non-increasing or non-decreasing order.</li>
         <li>Priority queues are built on the top of the max heap and min heap</li>

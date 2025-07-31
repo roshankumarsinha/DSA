@@ -74,6 +74,13 @@ int main() {
 
 // We can solve this problem with space complexity of O(1) using a two-pointer approach. The idea is to maintain two pointers, start and end, to represent the current window. We will iterate over the array and slide the window one element at a time. At each step, we will check if the current element is negative and update the result accordingly.
 
+// Approach
+// 1.   Use a variable to keep track of the index of the first negative integer in the current window.
+// 2.   Slide the window one element at a time:
+//      a.  If the current first negative integer (tracked by the variable) is outside the window, find the next negative integer within the window.
+//      b.  Record the first negative integer of the current window.
+// 3.   This approach avoids the use of extra space beyond a few variables.
+
 // void firstNegativeInteger(vector<int>& arr, int k) {
 //     int n = arr.size();
 //     int firstNegativeIndex = -1; // To track the index of the first negative integer in the current window
@@ -100,3 +107,5 @@ int main() {
 //     }
 //     cout << endl;
 // }
+
+// Time Complexity : O(N)
