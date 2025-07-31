@@ -1,5 +1,11 @@
 // Write a function to remove duplicates from a sorted linked list. The function should modify the list in place and return the head of the modified list.
 
+// Intiution:
+// 1. Since the linked list is sorted, we can simply traverse the list and compare each node with the next node.
+// 2. If the current node's data is equal to the next node's data, we can remove the next node by updating the current node's next pointer to skip the next node.
+// 3. If the current node's data is not equal to the next node's data, we can simply move to the next node.
+// 4. We continue this process until we reach the end of the list.
+
 #include <iostream>
 
 using namespace std;

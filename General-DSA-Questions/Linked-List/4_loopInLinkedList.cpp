@@ -1,5 +1,7 @@
 // Write a function to detect a loop in a linked list. If a loop is detected, return true; otherwise, return false.
 
+// Notes : https://takeuforward.org/data-structure/detect-a-cycle-in-a-linked-list/
+
 #include <iostream>
 
 using namespace std;

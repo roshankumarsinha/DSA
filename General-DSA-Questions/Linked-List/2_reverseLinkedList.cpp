@@ -1,5 +1,7 @@
 // Write a function to reverse a linked list
 
+// Notes (Check Optimal Approach 1) : https://takeuforward.org/data-structure/reverse-a-linked-list/
+
 #include <iostream>
 
 using namespace std;

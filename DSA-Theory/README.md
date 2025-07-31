@@ -337,6 +337,10 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                 </pre>
             </li>
         </ol>
+        <h1>Linked Lists :-</h1>
+        <li>
+            ChatGpt Notes : <a href="https://chatgpt.com/share/6889f9cf-1090-8006-868c-4ac19d3504a7">Click Here</a>
+        </li>
         <h1>Stack :-</h1>
         <li>Unlike vectors, elements in the stack are not accessed by index numbers. Since elements are added and removed from the top, you can only access the element at the top of the stack.</li>
         <li>Various methods for stack :-
@@ -359,6 +363,9 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                     cout << s.top();    // This will print 2
                 </code>
             </pre>
+        </li>
+        <li>
+            ChatGPT Notes : <a href="https://chatgpt.com/share/688b20f0-3f74-8006-a30e-6447365bc5b2">Click Here</a>
         </li>
         <h1>Queue :-</h1>
         <li>Unlike vectors, elements in the queue are not accessed by index numbers. Since elements are added at the back and removed from the front, you can only access the element at the front of the queue.</li>

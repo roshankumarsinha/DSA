@@ -1,5 +1,7 @@
 // Write a function to remove a loop in a linked list. If a loop is detected, remove the loop and return true; otherwise, return false.
 
+// Notes : https://takeuforward.org/data-structure/starting-point-of-loop-in-a-linked-list/
+
 #include <iostream>
 
 using namespace std;

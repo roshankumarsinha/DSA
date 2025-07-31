@@ -1,5 +1,7 @@
 // Implement Singly Linked List
 
+// Notes for Theory of Linked List: https://takeuforward.org/linked-list/linked-list-introduction
+
 #include<iostream>
 
 using namespace std;
@@ -28,6 +30,9 @@ void insertAtEnd(int data, Node* &tail) {
     tail = temp;
 }
 
+// Intiution is as follows :
+// 1. If position is 1, insert at the beginning.
+// 2. If position is greater than the length of the list, insert at the end
 void insertAtMiddle(int data, int position, Node* &head, Node* &tail) {
     if (position <= 0) {
         cout << "You entered wrong position value" << endl;
@@ -41,19 +46,21 @@ void insertAtMiddle(int data, int position, Node* &head, Node* &tail) {
         head = temp;
         return;
     }
+
+    // Traverse to the position where the new node should be inserted
     while (count != position - 1 && temp1 != nullptr) {
         temp1 = temp1 -> next;
         count++;
     }
-    if (temp1 == nullptr) {
+    if (temp1 == nullptr) {     // If position is greater than the length of the list
         cout << "Position you mentioned is too large" << endl;
         return;
-    } else if (temp1 == tail) {
+    } else if (temp1 == tail) {     // If position is at the end of the list
         temp1 -> next = temp;
         tail = temp;
-    } else {
-        temp -> next = temp1 -> next;
-        temp1 -> next = temp;
+    } else {    // If position is in the middle of the list
+        temp -> next = temp1 -> next;   // Link the new node to the next node of temp1
+        temp1 -> next = temp;   // Link temp1 to the new node
     }
 }
 

@@ -1,5 +1,7 @@
 // Write a function to add two numbers represented by linked lists. The digits are stored in form of a singly linked list, where each node represents a digit of the number.
 
+// Notes : https://takeuforward.org/data-structure/add-two-numbers-represented-as-linked-lists/
+
 // Approach:
 // 1. Reverse both linked lists. This way, the least significant digit is at the head of the list.
 // 2. Traverse both linked lists simultaneously and add the corresponding digits along with the carry.

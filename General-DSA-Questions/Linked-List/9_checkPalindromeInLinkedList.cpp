@@ -1,5 +1,7 @@
 // Write a function to check if a linked list is a palindrome. A palindrome is a sequence that reads the same forwards and backwards.
 
+// Notes : https://takeuforward.org/data-structure/check-if-given-linked-list-is-plaindrome/
+
 // Approach 1: You can copy the elements of the linked list to an array and then check if the array is a palindrome. This approach requires O(n) extra space.
 // Approach 2: You can reverse the second half of the linked list and then compare it with the first half. This approach requires O(1) extra space.
 
