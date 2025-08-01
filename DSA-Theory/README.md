@@ -337,6 +337,9 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                 </pre>
             </li>
         </ol>
+        <h1>Some Named Algo & Binary Seacrh</h1>
+        <li>Wherever me have to find min(max) then think about Binary Search (Book Allocation Question)</li>
+        <li>ChatGpt Notes : <a href="https://chatgpt.com/share/688d0e1c-228c-8006-92ba-7d9dfe01de6c">Click Here</a></li>
         <h1>Linked Lists :-</h1>
         <li>
             ChatGpt Notes : <a href="https://chatgpt.com/share/6889f9cf-1090-8006-868c-4ac19d3504a7">Click Here</a>

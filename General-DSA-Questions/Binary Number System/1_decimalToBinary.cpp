@@ -1,5 +1,7 @@
 // Write a code to convert a decimal number to binary number.
 
+// Video link : https://www.youtube.com/watch?v=xpy5NXiBFvA&list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&index=6
+
 #include <iostream>
 using namespace std;
 

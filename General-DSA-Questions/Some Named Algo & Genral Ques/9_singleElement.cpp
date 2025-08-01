@@ -1,4 +1,25 @@
-// Write a function to find single element in a sorted array where every element appears twice except for one element which appears only once.
+// Write a function to find single element in a sorted/unsorted array where every element appears twice except for one element which appears only once.
+
+// Note : We are not using any feature of sorted array in this code. So, this code will work for unsorted array as well.
+
+// Example:
+// Input : nums =[2, 2, 1, 1, 3, 3, 4, 8, 8]
+// Output : 4
+
+// Video link : https://www.youtube.com/watch?v=qsbCBduIs40&list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&index=20
+
+// Intuition:
+// 1. Total number of elements in the array is always odd.
+// 2. If the mid is even : Total number of elements on both sides of mid is even.
+//    a. If mid and mid - 1 are equal, then single element will definitely be on left side.
+//    b. If mid and mid - 1 are not equal, then single element will definitely be on right side.
+// 3. If the mid is odd : Total number of elements on both sides of mid is odd.
+//    a. If mid and mid - 1 are equal, then single element will definitely be on right side.
+//    b. If mid and mid - 1 are not equal, then single element will definitely be on left side.
+
+// Time Complexity: O(log n) - We are using binary search to find the single element.
+// Space Complexity: O(1) - We are using a constant amount of space for the variables start, end, and mid.
+
 
 #include <iostream>
 #include <vector>

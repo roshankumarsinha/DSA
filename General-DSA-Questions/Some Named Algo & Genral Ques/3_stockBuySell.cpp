@@ -1,4 +1,20 @@
 // Write a function to find the maximum profit by buying and selling. One can buy and sell only once.
+// Given an array of prices where prices[i] is the price of a stock on day i, find the maximum profit by buying on one day and selling on another later day.
+// You can make only one transaction (buy once, sell once).
+
+// Video link : https://www.youtube.com/watch?v=WBzZCm46mFo&list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&index=13
+// Example:
+// Input: prices = [7, 1, 5, 3, 6, 4]
+// Output: 5
+// Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), max profit = 6 - 1 = 5.
+
+
+// 🧠 Why It Works (Intuition)
+// 1.   You want to buy at the lowest point and sell at a later higher point.
+// 2.   So, you track:
+//      a.  minPrice as the lowest price seen so far.
+//      b.  value - minPrice as today's potential profit if you sold today.
+// 3.   Keep updating the maxProfit.
 
 #include <iostream>
 #include <vector>
