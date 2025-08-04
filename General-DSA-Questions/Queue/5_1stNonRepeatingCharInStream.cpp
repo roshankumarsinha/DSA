@@ -1,4 +1,6 @@
-// Write a function that takes a string s. While reading characters from the stream, you have to tell which character has appeared only once in the stream upto that point. If there are many characters that have appeared only once, you have to tell which one of them was the first one to appear. If there is no such character then append '#' to the answer.
+// Write a function that takes a string s. While reading characters from the stream, you have to tell which character has appeared only once in the stream upto that point.
+// If there are many characters that have appeared only once, you have to tell which one of them was the first one to appear.
+// If there is no such character then append '#' to the answer.
 
 // Appraoch :-
 // 1. We will use a queue to store the characters that have appeared only once in the stream.

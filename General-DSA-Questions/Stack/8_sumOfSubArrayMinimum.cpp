@@ -38,7 +38,7 @@
 
 // So, the number of such subarrays is:
 //    leftCount = i - PLE[i]
-//    ightCount = NLE[i] - i
+//    rightCount = NLE[i] - i
 //    totalSubarraysWithArrIAsMin = leftCount * rightCount
 
 // Therefore, the contribution of arr[i] is:
