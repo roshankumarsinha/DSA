@@ -1,5 +1,6 @@
 // Write a function to do Morris Traversal of a binary tree.
-// Morris Traversal is an efficient in-place tree traversal technique that does not use recursion or extra space (like a stack or queue). It modifies the tree temporarily to establish threaded binary links for traversal.
+// Morris Traversal is an efficient in-place tree traversal technique that does not use recursion or extra space (like a stack or queue).
+// It modifies the tree temporarily to establish threaded binary links for traversal.
 
 // Why Morris Traversal?
 //  1. ✅ No extra space (O(1) auxiliary space, unlike recursion or stack-based traversal).

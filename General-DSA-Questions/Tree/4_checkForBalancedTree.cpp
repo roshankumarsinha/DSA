@@ -86,7 +86,8 @@ public:
     }
 };
 
-pair<int, bool> isBalanced(Node* root) {
+pair<int, bool> isBalanced(Node* root) {    // The pair<int, bool> will store {height, isBalanced}
+    // Base Case
     if (root == NULL) {
         return {0, true};
     }

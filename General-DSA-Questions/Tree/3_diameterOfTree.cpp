@@ -84,7 +84,8 @@ public:
     }
 };
 
-pair<int, int> diameterOfTree(Node* root) {
+pair<int, int> diameterOfTree(Node* root) {     // The pair<int, int> will store {height, diameter}
+    // Base Case
     if (root == NULL) {
         return {0, 0};
     }
@@ -155,7 +156,7 @@ int main() {
 //         int rightHeight = height(node->right);
 
 //         // Update the diameter if the path through this node is larger
-//         diameter = max(diameter, leftHeight + rightHeight);
+        // diameter = max(diameter, leftHeight + rightHeight);  // If we have to consider nodes as part of diameter, then we add 1 and if diameter is considered as edges then we don't add 1
 
 //         // Return height of this subtree
 //         return 1 + max(leftHeight, rightHeight);

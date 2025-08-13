@@ -39,7 +39,7 @@ public:
 };
 
 // Function to check if a binary tree is a sum tree or not
-pair<int, bool> checkSumTree(Node* root) {
+pair<int, bool> checkSumTree(Node* root) {  // The pair<int, bool> will store {sum, isSumTree}
   if (root == NULL) {   // Empty tree is a Sum Tree
     return {0, true};
   }

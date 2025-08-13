@@ -1,5 +1,6 @@
 // Write a function to find the sum of the longest bloodline of a tree.
-// The sum of the longest bloodline of a tree is the sum of the nodes on the longest path from the root node to the leaf node. If there are multiple paths with the same length, consider the path that has the maximum sum of nodes.
+// The sum of the longest bloodline of a tree is the sum of the nodes on the longest path from the root node to the leaf node.
+// If there are multiple paths with the same length, consider the path that has the maximum sum of nodes.
 
 // Example:
 // Tree considered here is :
@@ -18,6 +19,18 @@
 // 1. Use DFS (Preorder Traversal) to traverse all root-to-leaf paths.
 // 2. Track maxLength (maximum depth) and maxSum (sum at max depth).
 // 3. Update maxSum whenever a longer path is found.
+
+// Step by Step Execution:
+// 1. Initialize maxLength and maxSum to 0 and depth and sum to 0.
+// 2. Start DFS from the root node.
+// 3. For each node, add its value to the sum and increase the depth.
+// 4. If a leaf node is reached:
+//    - If depth > maxLength, update maxLength and maxSum.
+//    - If depth == maxLength, update maxSum if current sum is greater.
+// 5. Return maxSum after traversing all paths.
+
+// Time Complexity: O(N), where N is the number of nodes in the tree.
+// Space Complexity: O(H), where H is the height of the tree (due to recursion stack).
 
 #include <iostream>
 using namespace std;

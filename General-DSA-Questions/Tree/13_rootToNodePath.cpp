@@ -70,6 +70,19 @@ public:
             return true;
         }
 
+        // We can write above line like this as well:
+        // // Search in the left subtree
+        // bool foundInLeft = getPath(root->left, arr, x);
+        // if (foundInLeft) {
+        //     return true;
+        // }
+
+        // // Search in the right subtree
+        // bool foundInRight = getPath(root->right, arr, x);
+        // if (foundInRight) {
+        //     return true;
+        // }
+
         // If the target value 'x' is not found
         // in the current path, backtrack
         arr.pop_back();
