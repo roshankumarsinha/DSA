@@ -1,7 +1,8 @@
 // Write a function to determine whether two nodes exist in the tree such that their sum equals a given target.
 
 // ✅ Problem Statement
-// Given the root of a BST and an integer k, return true if there exist two elements in the BST such that their sum is equal to k, else return false.
+// Given the root of a BST and an integer k, return true if there exist two elements in the BST such that their sum is equal to k,
+// else return false.
 
 // Approach 1: Inorder Traversal + Two Pointers
 // 1. Perform an inorder traversal of the BST and store the elements in a vector. The inorder traversal of a BST gives us a sorted array.

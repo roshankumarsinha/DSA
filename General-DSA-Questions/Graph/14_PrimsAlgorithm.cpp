@@ -85,6 +85,7 @@ class Graph {
 
         // Priority queue to store {weight, node, parent}. Min-heap based on weight.
         // If we do not wish to store the mst, we can use a pair instead of a triplet.
+        // Using a pair to store {weight, node}, something like: priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
         priority_queue<pair<int, pair<int, int>>, vector<pair<int, pair<int, int>>>, greater<pair<int, pair<int, int>>>> pq;
 
         // Start from node 0, with weight 0 and no parent (-1)
