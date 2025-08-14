@@ -1,4 +1,5 @@
-// Write a function that takes an array and a number k as input and returns the first negative number in every window of size k. If there is no negative number in a window, return 0. The function should have the following signature:-
+// Write a function that takes an array and a number k as input and returns the first negative number in every window of size k.
+// If there is no negative number in a window, return 0. The function should have the following signature:-
 // vector<int> firstNegativeInWindowK(vector<int> arr, int K);
 
 // Approach to solve the problem
