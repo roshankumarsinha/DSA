@@ -102,7 +102,7 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
         <h1>Knowledge on Vectors :</h1>
         <ol>
             <li>Vector is included using a header
-                <pre><code>#include <,vector,>  //You can ignore the ,,</code></pre>
+                <pre><code>#include &lt;vector&gt;</code></pre>
             </li>
             <li>vector is Declared using :
                 <pre><code>
@@ -274,8 +274,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                 </ul>
                 <pre>
                     <code>
-                        #include <.deque.>    // Include deque header. Dot is added just to render it on Markdown
-                        deque<.int.> dq = {1, 2, 3, 4, 5};    // Create a deque
+                        #include &lt;deque&gt;    // Include deque header
+                        deque&lt;int&gt; dq = {1, 2, 3, 4, 5};    // Create a deque
                         for (int i = 0; i < dq.size(); i++) {
                             dq[i] = dq[i] + 1;    // Increment each element by 1
                             cout << dq[i] << " ";    // Output will be 2 3 4 5 6
@@ -315,8 +315,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                         insert() - This will insert element at specific position. It takes 2 arguments, first is iterator and second is value. Example:
                         <pre>
                             <code>
-                                #include <.list.>    // Include list header
-                                list<.int.> l = {1, 2, 3, 4, 5};    // Create a list
+                                #include &lt;list&gt;   // Include list header
+                                list&lt;int&gt; l = {1, 2, 3, 4, 5};    // Create a list
                                 l.insert(l.begin(), 10);    // Insert 10 at beginning
                                 for(auto i = l.begin(); i != l.end(); i++) {
                                     cout << *i << " ";    // Output will be 10 1 2 3 4 5
@@ -327,8 +327,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                 </ul>
                 <pre>
                     <code>
-                        #include <.list.>    // Include list header
-                        list<.int.> l = {1, 2, 3, 4, 5};    // Create a list
+                        #include &lt;list&gt;    // Include list header
+                        list&lt;int&gt; l = {1, 2, 3, 4, 5};    // Create a list
                         for(auto i = l.begin(); i != l.end(); i++) {    // You can't use traditional for loop, as list doesn't support random access like vector. You can use for each loop also
                             *i = *i + 1;    // Increment each element by 1
                             cout << *i << " ";    // Output will be 2 3 4 5 6
