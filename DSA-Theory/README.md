@@ -107,9 +107,9 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             <li>vector is Declared using :
                 <pre><code>
                     vector&lt;int&gt; v; // This will create a vector of int type
-                    vector<int> v(5); // This will create a vector of int type with size 5
-                    vector<int> v(5, 10); // This will create a vector of int type with size 5 and all elements will be 10
-                    vector<int> v{1, 2, 3, 4, 5}; // This will create a vector of int type with size 5 and elements will be 1, 2, 3, 4, 5
+                    vector&lt;int&gt; v(5); // This will create a vector of int type with size 5
+                    vector&lt;int&gt; v(5, 10); // This will create a vector of int type with size 5 and all elements will be 10
+                    vector&lt;int&gt; v{1, 2, 3, 4, 5}; // This will create a vector of int type with size 5 and elements will be 1, 2, 3, 4, 5
                 </code></pre>
             </li>
             <li>You can loop vector with iterator also:
