@@ -16,6 +16,8 @@
 
 // Approach 1 : (Using Two Arrays for Left and Right Max Heights)
 // 1. Create two arrays, maxLeft and maxRight, to store the maximum heights to the left and right of each index.
+//    a. maxLeft[i] contains height of tallest bar to the left of index i (including i).
+//    b. maxRight[i] contains height of tallest bar to the right of index i (including i).
 // 2. Traverse the heightInput array from left to right to fill maxLeft.
 // 3. Traverse the heightInput array from right to left to fill maxRight.
 // 4. For each index i, calculate the water trapped as min(maxLeft[i], maxRight[i]) - heightInput[i].

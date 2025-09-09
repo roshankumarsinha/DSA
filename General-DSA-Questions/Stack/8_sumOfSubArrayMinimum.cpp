@@ -65,6 +65,7 @@ int sumSubarrayMins(vector<int>& arr) {
         while (!s.empty() && arr[s.top()] > arr[i]) { // Pop elements that are greater than the current element
             s.pop();
         }
+        // -1 is used because, If no smaller element exists, that means all subarrays starting from index 0 up to i can have arr[i] as the minimum
         ple[i] = s.empty() ? -1 : s.top();  // If stack is empty, ple[i] is -1, otherwise it is the index of the previous less element
         // Push current index onto the stack
         s.push(i);
@@ -78,6 +79,7 @@ int sumSubarrayMins(vector<int>& arr) {
         while (!s.empty() && arr[s.top()] >= arr[i]) {  // Pop elements that are greater than or equal to the current element
             s.pop();
         }
+        // n is used because, If no smaller element exists, that means all subarrays ending from index i to n-1 can have arr[i] as the minimum
         nle[i] = s.empty() ? n : s.top(); // If stack is empty, nle[i] is n, otherwise it is the index of the next less element
         s.push(i);
     }
