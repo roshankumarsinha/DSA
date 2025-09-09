@@ -833,8 +833,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             To create a min-heap, use the following code:
             <pre>
                 <code>
-                    #include <.queue>    // Include queue header
-                    priority_queue<.int, vector<.int>, greater<.int>> pq;    // Create a min-heap
+                    #include &lt;queue&gt;   // Include queue header
+                    priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; pq;    // Create a min-heap
                     pq.push(1);    // Add 1 in heap
                     pq.push(2);    // Add 2 in heap
                     pq.push(3);    // Add 3 in heap
