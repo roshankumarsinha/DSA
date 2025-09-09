@@ -114,7 +114,7 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             </li>
             <li>You can loop vector with iterator also:
                 <pre><code>
-                    vector<int> v{1, 2, 3, 4, 5};
+                    vector&lt;int&gt; v{1, 2, 3, 4, 5};
                     for (int value: v) {
                         cout << value << " ";   // Output will be 1 2 3 4 5, where value will be v[0], v[1], v[2], v[3], v[4]
                     }
@@ -122,7 +122,7 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             </li>
             <li>Some Functions related to vector :
                 <pre><code>
-                    vector<int> v{1, 2, 3, 4, 5};
+                    vector&lt;int&gt; v{1, 2, 3, 4, 5};
                     v.push_back(6); // This will add 6 at the end of vector
                     v.pop_back(); // This will remove last element from vector
                     v.size(); // This will return size of vector. The number of elements currently stored in the vector.
@@ -356,8 +356,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             </ul>
             <pre>
                 <code>
-                    #include <.stack.>    // Include stack header
-                    stack<.int.> s;    // Create a stack
+                    #include &lt;stack&gt;    // Include stack header
+                    stack&lt;int&gt; s;    // Create a stack
                     s.push(1);    // Add 1 at top
                     s.push(2);    // Add 2 at top
                     s.push(3);    // Add 3 at top
@@ -383,8 +383,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             </ul>
             <pre>
                 <code>
-                    #include <.queue.>    // Include queue header
-                    queue<.int.> q;    // Create a queue
+                    #include &lt;queue&gt;    // Include queue header
+                    queue&lt;int&gt; q;    // Create a queue
                     q.push(1);    // Add 1 at back
                     q.push(2);    // Add 2 at back
                     q.push(3);    // Add 3 at back
@@ -418,8 +418,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             </ul>
             <pre>
                 <code>
-                    #include <.queue.>    // Include queue header
-                    priority_queue<.int.> pq;    // Create a priority queue, with max-heap, which means it will return greatest element, To make it min-heap use priority_queue<.int., vector<.int.>, greater<.int.>> pq;
+                    #include &lt;queue&gt;    // Include queue header
+                    priority_queue&l;int&gt; pq;    // Create a priority queue, with max-heap, which means it will return greatest element, To make it min-heap use priority_queue<.int., vector<.int.>, greater<.int.>> pq;
                     pq.push(1);    // Add 1 in queue
                     pq.push(2);    // Add 2 in queue
                     pq.push(3);    // Add 3 in queue
@@ -436,7 +436,7 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
         <li>To store element in descending order use something like :-
             <pre>
                 <code>
-                    map<.int, int, greater<.int>> m;    // This will store elements in descending order
+                    map&lt;int, int, greater&lt;int&gt;&gt; m;    // This will store elements in descending order
                 </code>
             </pre>
         </li>
@@ -453,8 +453,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                 <li>Insert : Using []
                     <pre>
                         <code>
-                            #include <.map.>    // Include map header
-                            map<.int, string> m;    // Create a map
+                            #include &lt;map&gt;    // Include map header
+                            map&lt;int, string&gt; m;    // Create a map
                             m[1] = "abc";    // Insert 1 with value abc
                             m[2] = "def";    // Insert 2 with value def
                             m[3] = "ghi";    // Insert 3 with value ghi
@@ -477,7 +477,7 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                 <li>Loop through map : Map can be looped through auto
                     <pre>
                         <code>
-                            map<.int, string> m;
+                            map&lt;int, string&gt; m;
                             for(auto i: m) {
                                 cout << i.first << " " << i.second << endl;
                             }
@@ -499,8 +499,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
         <li>Most of the methods are similar to ordere map. Example :-
             <pre>
                 <code>
-                    #include <.unordered_map>    // Include unordered_map header
-                    unordered_map<.int, string> m;    // Create a unordered_map
+                    #include &lt;unordered_map&gt;    // Include unordered_map header
+                    unordered_map&lt;int, string&gt; m;    // Create a unordered_map
                     m[1] = "abc";    // Insert 1 with value abc
                     m[2] = "def";    // Insert 2 with value def
                     m[3] = "ghi";    // Insert 3 with value ghi
@@ -516,15 +516,15 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
         <li>Similar, to map if you want to store elementin descending order use something like :-
             <pre>
                 <code>
-                    set<.int, greater<.int>> s;    // This will store elements in descending order
+                    set&lt;int, greater&lt;int&gt;&gt; s;    // This will store elements in descending order
                 </code>
             </pre>
         </li>
         <li>Methods and time complexity are same as map. Example :-
             <pre>
                 <code>
-                    #include <.set>    // Include set header
-                    set<.int> s;    // Create a set
+                    #include &lt;set&gt;    // Include set header
+                    set&lt;int&gt; s;    // Create a set
                     s.insert(1);    // Insert 1 in set
                     s.insert(2);    // Insert 2 in set
                     s.insert(3);    // Insert 3 in set
@@ -535,8 +535,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
         <li>Similary, we have unoredred set, which almost same as unordered map. Example :-
             <pre>
                 <code>
-                    #include <.unordered_set>    // Include unordered_set header
-                    unordered_set<.int> s;    // Create a unordered_set
+                    #include &lt;unordered_set&gt;    // Include unordered_set header
+                    unordered_set&lt;int&gt; s;    // Create a unordered_set
                     s.insert(1);    // Insert 1 in unordered_set
                     s.insert(2);    // Insert 2 in unordered_set
                     s.insert(3);    // Insert 3 in unordered_set
@@ -559,8 +559,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             </ul>
             <pre>
                 <code>
-                    #include <.queue>    // Include queue header
-                    queue<.int> q;    // Create a queue
+                    #include &lt;queue&gt;    // Include queue header
+                    queue&lt;int&gt; q;    // Create a queue
                     q.push(1);    // Add 1 at back
                     q.push(2);    // Add 2 at back
                     q.push(3);    // Add 3 at back
@@ -591,7 +591,7 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             </ul>
             <pre>
                 <code>
-                    #include <.deque>    // Include deque header
+                    #include &lt;deque&gt;    // Include deque header
                     deque<.int> dq;    // Create a dequeue
                     dq.push_front(1);    // Add 1 at front
                     dq.push_back(2);    // Add 2 at back
@@ -618,8 +618,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
         <li>How to use it :-
             <pre>
                 <code>
-                    #include <.unordered_map>    // Include unordered_map header
-                    unordered_map<.string, int> myMap;    // Create a unordered_map
+                    #include &lt;unordered_map&gt;    // Include unordered_map header
+                    unordered_map&lt;string, int&gt; myMap;    // Create a unordered_map
                     // Insert elements
                     myMap["apple"] = 3;
                     myMap["banana"] = 5;
