@@ -822,8 +822,8 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             Priority Queue will automatically create a heap for you, and you can use it as a heap.
             <pre>
                 <code>
-                    #include <.queue>    // Include queue header
-                    priority_queue<.int> pq;    // Create a max-heap
+                    #include &lt;queue&gt;    // Include queue header
+                    priority_queue&lt;int&gt; pq;    // Create a max-heap
                     pq.push(1);    // Add 1 in heap
                     pq.push(2);    // Add 2 in heap
                     pq.push(3);    // Add 3 in heap
