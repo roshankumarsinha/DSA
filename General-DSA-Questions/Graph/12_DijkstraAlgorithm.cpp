@@ -97,6 +97,36 @@ class Graph {
 
         return distance; // Return the distance array
     }
+
+    // Function to perform Dijkstra's Algorithm using a priority queue, this is more easy to implement than using a set
+    vector<int> dijkstraUsingPQ(int source) {
+        vector<int> distance(V, INT_MAX); // Initialize distance array with a very large number
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq; // Min-heap priority queue
+
+        distance[source] = 0; // Distance from source to itself is 0
+        pq.push({0, source}); // Start with the source node
+
+        while (!pq.empty()) {
+            auto it = pq.top(); // Get the node with the minimum distance
+            int nodeDistance = it.first; // Distance of the current node
+            int node = it.second; // Current node
+            pq.pop(); // Remove the current node from the priority queue
+
+            // Traverse all its neighbors
+            for (auto neighbor : adjList[node]) {
+                int edgeWeight = neighbor.second; // Weight of the edge
+                int neighborNode = neighbor.first; // Neighbor node
+
+                // If the current reachable distance is better than the previous distance
+                if (nodeDistance + edgeWeight < distance[neighborNode]) {
+                    distance[neighborNode] = nodeDistance + edgeWeight; // Update the distance
+                    pq.push({distance[neighborNode], neighborNode}); // Insert the new pair into the priority queue
+                }
+            }
+        }
+
+        return distance; // Return the distance array
+    }
 };
 
 int main() {
