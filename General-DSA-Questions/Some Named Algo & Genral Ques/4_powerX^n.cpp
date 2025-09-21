@@ -4,6 +4,10 @@
 
 // Intuition:
 // Any integer power n can be broken down using its binary representation.
+// Any integer power n can be broken down using its binary representation because binary represents a number as a sum of powers of 2.
+// Any integer n can be written in binary as:
+//      n = (b_k * 2^k) + (b_(k-1) * 2^(k-1)) + ... + (b_1 * 2^1) + (b_0 * 2^0)
+//      where b_i is either 0 or 1.
 // Let's say :
 //  1. x^n = x^2^0 * x^2^1 * x^2^2 * ... * x^2^k
 // This means:
