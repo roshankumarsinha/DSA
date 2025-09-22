@@ -419,7 +419,7 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             <pre>
                 <code>
                     #include &lt;queue&gt;    // Include queue header
-                    priority_queue&l;int&gt; pq;    // Create a priority queue, with max-heap, which means it will return greatest element, To make it min-heap use priority_queue<.int., vector<.int.>, greater<.int.>> pq;
+                    priority_queue&lt;int&gt; pq;    // Create a priority queue, with max-heap, which means it will return greatest element, To make it min-heap use priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; pq;
                     pq.push(1);    // Add 1 in queue
                     pq.push(2);    // Add 2 in queue
                     pq.push(3);    // Add 3 in queue
