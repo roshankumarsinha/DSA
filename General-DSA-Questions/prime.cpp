@@ -21,7 +21,7 @@ int main() {
     // If both a and b were greater than the square root of n, a*b would be greater than n.
     // So at least one of those factors must be less than or equal to the square root of n, and to check if n is prime, we only need to test for factors less than or equal to the square root.
     // Time complexity: O(sqrt(n)) 
-    for (int i=4; i*i<=num; i++) {
+    for (int i=2; i*i<=num; i++) {
         if (num % i == 0) {
             cout << "not a prime number" << endl;
             return 0;
