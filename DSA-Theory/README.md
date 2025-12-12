@@ -23,11 +23,14 @@
     <h1>Operators</h1>
     <ol>
         <li>Arithmetic Operators => +, -, *, /, % (Keep in mind if one of the operand is of bigger data type than result will be of that data type. EX: 5/(double)2. Ans will be 2.5 which will be of souble type)</li>
-        <li>Relational Operators(It returns boolean value) => ==, !=, >, <, >=, <o=</li>
+        <li>Relational Operators(It returns boolean value) => ==, !=, >, <, >=, <=</li>
         <li>Logical Operators => &&, ||, !</li>
         <li>Increment/Decrement(Unary) Operators => ++, --</li>
     </ol>
 <h1>To Execute C++ code in VS code use <pre><code>g++ filename.cpp && ./a.out</code></pre></h1>
+<h1>
+    One header file to include most of the standard libraries is <pre><code>#include &lt;bits/stdc++.h&gt;</code></pre>
+</h1>
 <h1>Tips to solve Pattern Problems :-</h1>
     <ol>
         <li>Always try to solve pattern problems by breaking it into smaller parts.</li>
