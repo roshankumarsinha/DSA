@@ -140,6 +140,9 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                     v.resize(10); // This will resize vector to 10
                     v.resize(10, 5); // This will resize vector to 10 and all elements will be 5
                     v.capacity(); // The total amount of memory allocated, which may be more than the number of elements.
+                    v.sort(v.begin(), v.end()); // This will sort the vector in ascending order.
+                    v.reverse(v.begin(), v.end()); // This will reverse the vector.
+                    v.sort(v.begin(), v.end(), greater&lt;int&gt;()); // This will sort the vector in descending order.
                 </code></pre>
             </li>
             <li>Use <b>g++ -std=c++11 test.cpp && ./a.out</b> command if it uses stl library</li>
