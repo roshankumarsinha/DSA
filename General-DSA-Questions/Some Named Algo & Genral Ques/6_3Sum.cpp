@@ -81,7 +81,7 @@ int main() {
     return 0;
 }
 // Time Complexity: O(n^2) - Sorting the array takes O(n log n)
-// and the two-pointer technique takes O(n) for each of the n elements.
+// and the two-pointer technique takes O(n) for each of the n elements. So, overall it is O(n^2).
 // Space Complexity: O(1) - We are using only a constant amount of extra space (not counting the output storage).
 
 // 4 Sum Problem is also similar to this problem but there we fix two elements and then use two pointer approach for the other two elements.

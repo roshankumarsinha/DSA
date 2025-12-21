@@ -3,6 +3,7 @@
 // 📘 Problem Statement
 // You are given an array books[] where books[i] represents the number of pages in the i-th book, and an integer M — the number of students.
 // Your task is to allocate books to M students such that:
+//    Each student gets at least one book.
 //    Each student gets contiguous books.
 //    Each book is assigned to exactly one student.
 //    Goal: Minimize the maximum number of pages assigned to a student.
@@ -85,7 +86,7 @@ int allocateBooks(vector<int> &books, int m) {
         int mid = low + (high - low) / 2; // Calculate mid
 
         int students = countStudents(books, mid); // Count how many students can be allocated with mid pages
-        if (students > m) { // If more students are needed than available
+        if (students > m) { // If more students are needed than available, then mid is too small, it can't be the answer, so we need to decrease students so that it atleast becomes equal to m, we increase mid
             low = mid + 1; // Increase the minimum limit, and move to the right half so that we can decrease the students
         } else { // If we can allocate books to m or fewer students
             result = mid; // Update result with the current mid, This can be a potential answer
