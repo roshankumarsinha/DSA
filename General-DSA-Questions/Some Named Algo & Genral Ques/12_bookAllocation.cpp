@@ -11,6 +11,10 @@
 // Notes link : https://takeuforward.org/data-structure/allocate-minimum-number-of-pages/
 // Video link : https://www.youtube.com/watch?v=Z0hwjftStI4
 
+
+// For these kind of problems we need to find a range/scale in which our answer lies and then perform binary search on that range to find the optimal answer.
+// Before applying binary search, think of brute force which is linear search on the answer space, and then optimize it using binary search.
+
 // 🔍 Key Observations:
 // 1. If you assign all books to one student, the number of pages will be the sum of all books.
 // 2. If you assign each book to a different student, the maximum pages assigned will be the maximum book size.
