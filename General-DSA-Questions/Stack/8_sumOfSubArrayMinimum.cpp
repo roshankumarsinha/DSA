@@ -1,6 +1,9 @@
 // Given an array of integers arr, return the sum of the minimum value of all subarrays of arr.
 // Since the answer can be large, return the result modulo 10^9 + 7.
 
+// Notes link : https://takeuforward.org/data-structure/sum-of-subarray-minimums
+// Video link : https://www.youtube.com/watch?v=v0e8p9JCgRc
+
 // Example :
 // Input: [3, 1, 2, 4]
 // Output: 17
@@ -44,6 +47,13 @@
 // Therefore, the contribution of arr[i] is:
 // arr[i] * leftCount * rightCount
 
+
+// Why totalSubarraysWithArrIAsMin = leftCount * rightCount?
+// Now, think about pairing the subarrays that end at i with the subarrays that start at i.
+// ->  Each subarray that ends at i with arr[i] as the minimum (from the left side) can be combined with each subarray that starts at i with arr[i] as the minimum (from the right side).
+// ->  The key point here is that each subarray ending at i and having arr[i] as the minimum can be paired with each subarray starting at i and having arr[i] as the minimum.
+//     This results in a "rectangular" relationship between subarrays from the left side and the right side.
+// For example, if there are left ways to pick subarrays that end at i and right ways to pick subarrays that start at i, then there are left × right subarrays that both include arr[i] as the minimum.
 
 #include <iostream>
 #include <vector>

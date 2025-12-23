@@ -48,6 +48,11 @@
 // 2. When we pop, if the popped value is modified, we can retrieve the previous minimum using the formula: PreviousMin = 2 * CurrentMin - PoppedValue. But PoppedValue is the modified value.
 //    so, PreviousMin = 2 * CurrentMin - (2 * CurrentValue - PreviousMin) = PreviousMin.
 
+
+// Note: It's not necessary to use M.V = 2 * C.V - P.M formula, any formula that maintains the relationship and allows retrieval of previous minimum can be used.
+// like we can use M.V = C.V - P.M instead and update the previous min accordingly during pop operation. We just need to keep in mind
+// that we don't want to lose the information of previous minimum while pushing new minimum values.
+
 #include <iostream>
 #include<stack>
 #include<limits.h>
