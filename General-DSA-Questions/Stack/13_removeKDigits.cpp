@@ -1,6 +1,8 @@
 // Given a string nums representing a non-negative integer, and an integer k,
 // find the smallest possible integer after removing k digits from num.
 
+// Notes link : https://takeuforward.org/data-structure/remove-k-digits
+
 // Example:
 // Input: nums = "541892", k = 2
 // Output: "1892" 

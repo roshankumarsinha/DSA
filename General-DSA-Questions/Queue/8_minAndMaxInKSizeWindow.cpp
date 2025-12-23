@@ -1,6 +1,18 @@
 // Find sum of minimum and maximum elements of all subarrays of window size k.
 // Given an array of both positive and negative integers, the task is to compute sum of minimum and maximum elements of all sub-array of size k.
 
+// Example:
+// Input: arr[] = {2, 5, -1, 7, -3, -1, -2}, k = 3
+// Output: 14
+// Explanation:
+// Subarrays of size 3 are:
+// {2, 5, -1} => max = 5, min = -1
+// {5, -1, 7} => max = 7, min = -1
+// {-1, 7, -3} => max = 7, min = -3
+// {7, -3, -1} => max = 7, min = -3
+// {-3, -1, -2} => max = -1, min = -3
+// Sum of all max and min = (5 + -1) + (7 + -1) + (7 + -3) + (7 + -3) + (-1 + -3) = 14
+
 // Approach:
 // 1. We will use two Deques to store the maximum and minimum elements of the current window.
 //    a. maxi stores indices of elements in decreasing order — front is max.

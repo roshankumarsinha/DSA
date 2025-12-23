@@ -2,6 +2,17 @@
 // If there is no negative number in a window, return 0. The function should have the following signature:-
 // vector<int> firstNegativeInWindowK(vector<int> arr, int K);
 
+// Example:
+// Input: arr = [12, -1, -7, 8, -15, 30, 16, 28], k = 3
+// Output: [-1, -1, -7, -15, -15, 0]
+// Explanation:
+// Window 1: [12, -1, -7] -> First negative is -1
+// Window 2: [-1, -7, 8] -> First negative is -1
+// Window 3: [-7, 8, -15] -> First negative is -7
+// Window 4: [8, -15, 30] -> First negative is -15
+// Window 5: [-15, 30, 16] -> First negative is -15
+// Window 6: [30, 16, 28] -> No negative number, so return 0
+
 // Approach to solve the problem
 // 1. Use a queue to store the indices of negative integers in the current window of size k.
 // 2. Slide the window one element at a time, and:

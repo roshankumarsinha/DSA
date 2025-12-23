@@ -2,12 +2,26 @@
 // If there are many characters that have appeared only once, you have to tell which one of them was the first one to appear.
 // If there is no such character then append '#' to the answer.
 
+// Example:
+// Input: s = "aabcdbcad"
+// Output: "a#bbbcdd#"
+// Explanation:
+// After reading 'a', the first non-repeating character is 'a'.
+// After reading 'a', the first non-repeating character is '#' as 'a' is repeating.
+// After reading 'b', the first non-repeating character is 'b'.
+// After reading 'c', the first non-repeating character is 'b'.
+// After reading 'd', the first non-repeating character is 'b'.
+// After reading 'b', the first non-repeating character is 'c'.
+// After reading 'c', the first non-repeating character is 'd'.
+// After reading 'a', the first non-repeating character is 'd'.
+// After reading 'd', there is no non-repeating character so we append '#' to the answer.
+
 // Appraoch :-
 // 1. We will use a queue to store the characters that have appeared only once in the stream.
 // 2. We will use a frequency array to store the frequency of each character in the stream.(Hashmap can also be used)
 // 3. We will iterate over the string and do the following:-
 //    a. Increment the frequency of the current character.
-//    b. If the frequency of the current character is 1, we will push it into the queue.
+//    b. Push the current character to the queue.
 //    c. If the frequency of the current character is greater than 1, we will pop the front element of the queue until we get a character whose frequency is 1.
 //    d. If the queue is empty, we will append '#' to the answer.
 //    e. Otherwise, we will append the front element of the queue to the answer.

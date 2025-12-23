@@ -2,6 +2,18 @@
 // You have a car with an unlimited gas tank. You begin the journey with an empty tank from one of the gas stations.
 // Return the index of the starting gas station if it's possible to travel around the circuit without running out of gas at any station in a clockwise direction. If there is no such starting station exists, return -1.
 
+// Example 1:
+// Input: gas  = [1, 2, 3, 4, 5], cost = [3, 4, 5, 1, 2]
+// Output: 3, index of starting gas station
+// Explanation:
+// Start at station 4 (index 3) and fill up with 4 units of gas.
+// Travel to station 5 (index 4), your tank = 4 - 1 + 5 = 8
+// Travel to station 1 (index 0), your tank = 8 - 2 + 1 = 7
+// Travel to station 2 (index 1), your tank = 7 - 3 + 2 = 6
+// Travel to station 3 (index 2), your tank = 6 - 4 + 3 = 5
+// Travel to station 4 (index 3), your tank = 5 - 5 + 4 = 4
+// You can complete the tour starting from index 3.
+
 // Approach:
 // Key Observations:
 

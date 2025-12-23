@@ -3,6 +3,8 @@
 // When two asteroids collide, the smaller one explodes. If both are the same size, both explode. Asteroids moving in the same direction do not collide.
 // All asteroids move at the same speed. We need to find the final state of the asteroids after all collisions.
 
+// Notes link : https://takeuforward.org/data-structure/asteroid-collision
+
 // Example:
 // Input: asteroids = [5, 10, -5]
 // Output: [5, 10]
