@@ -6,7 +6,7 @@
 // 1. Initialize K pointers, one for each array (all at index 0).
 // 2. Loop until one of the pointers reaches the end of its respective array.
 // 3. In each loop:
-//    a.  Get current elements at all pointers.
+//    a. Get current elements at all pointers.
 //    b. Find the min and max among these.
 //    c. Update the smallest range.
 //    d. Move the pointer of the array which has the minimum element.
