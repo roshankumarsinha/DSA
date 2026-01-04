@@ -13,17 +13,17 @@
 
 // Example:
 // Input:
-// homepage = "leetcode.com"
-// visit("google.com")
-// visit("facebook.com")
-// visit("youtube.com")
-// back(1) -> returns "facebook.com"
-// back(1) -> returns "google.com"
-// forward(1) -> returns "facebook.com"
-// visit("linkedin.com")
-// forward(2) -> returns "linkedin.com"
-// back(2) -> returns "google.com"
-// back(7) -> returns "leetcode.com"
+// homepage = "leetcode.com", BrowserHistory = ["leetcode.com"], current = "leetcode.com"
+// visit("google.com"), BrowserHistory = ["leetcode.com", "google.com"], current = "google.com"
+// visit("facebook.com"), BrowserHistory = ["leetcode.com", "google.com", "facebook.com"], current = "facebook.com"
+// visit("youtube.com"), BrowserHistory = ["leetcode.com", "google.com", "facebook.com", "youtube.com"], current = "youtube.com"
+// back(1) -> returns "facebook.com", BrowserHistory = ["leetcode.com", "google.com", "facebook.com", "youtube.com"], current = "facebook.com"
+// back(1) -> returns "google.com", BrowserHistory = ["leetcode.com", "google.com", "facebook.com", "youtube.com"], current = "google.com"
+// forward(1) -> returns "facebook.com", BrowserHistory = ["leetcode.com", "google.com", "facebook.com", "youtube.com"], current = "facebook.com"
+// visit("linkedin.com"), BrowserHistory = ["leetcode.com", "google.com", "facebook.com", "linkedin.com"], current = "linkedin.com", so we delete all the forward history after "facebook.com"
+// forward(2) -> returns "linkedin.com", BrowserHistory = ["leetcode.com", "google.com", "facebook.com", "linkedin.com"], current = "linkedin.com"
+// back(2) -> returns "google.com", BrowserHistory = ["leetcode.com", "google.com", "facebook.com", "linkedin.com"], current = "google.com"
+// back(7) -> returns "leetcode.com", BrowserHistory = ["leetcode.com", "google.com", "facebook.com", "linkedin.com"], current = "leetcode.com"
 
 // Intuition:
 // 1. Use a doubly linked list to represent the browser history. Reason being we can move both forward and backward and dynamically add new pages.

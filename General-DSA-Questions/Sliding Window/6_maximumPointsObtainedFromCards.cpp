@@ -27,6 +27,17 @@
 // - Maximum score = Total sum - Minimum sum of subarray = 22 - 10 = 12.
 
 
+
+// 2nd approach :
+// 1. Calculate sum of first k elements from the start.
+// 2. Initialize maxScore with this sum.
+// 3. Use a loop to iterate from 0 to k-1:
+//    a. In each iteration, remove one element from the end of the current sum (i.e., cardPoints[k-1-i]) and add one element from the end of the array
+//       (i.e., cardPoints[n-1-i]) to the current sum.
+//    b. Update maxScore if the current sum is greater than maxScore.
+
+
+
 #include <iostream>
 #include <vector>
 #include <climits>  // for INT_MAX

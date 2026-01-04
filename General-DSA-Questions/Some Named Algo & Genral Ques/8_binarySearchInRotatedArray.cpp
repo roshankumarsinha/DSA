@@ -58,9 +58,9 @@ int main() {
 }
 
 
-// There is one more question that is similar to this one, which is to search in a rotated sorted array without duplicates.
+// There is one more question that is similar to this one, which is to search in a rotated sorted array with duplicates.
 // The logic is the same, but you have to handle one edge case where there are duplicates in the array and left, mid, and right elements are equal.
-// In that case, you can just increment the left pointer and decrement the right pointer to avoid infinite loop.
+// We cannot determine which side is sorted. In that case, you can just increment the left pointer and decrement the right pointer to avoid infinite loop.
 // Example:
 // Input: nums = [2, 2, 2, 3, 4, 2], target = 3
 // Output: 3

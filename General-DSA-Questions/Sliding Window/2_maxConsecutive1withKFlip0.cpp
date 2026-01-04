@@ -72,3 +72,10 @@ int longestOnes(vector<int>& nums, int k) {
 
     return maxLength;
 }
+
+int main() {
+    vector<int> nums = {1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0};
+    int k = 2;
+    cout << "Maximum number of consecutive 1's after flipping at most " << k << " 0's: " << longestOnes(nums, k) << endl;
+    return 0;
+}
