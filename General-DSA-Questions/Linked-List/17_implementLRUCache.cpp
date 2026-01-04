@@ -115,7 +115,7 @@ class LRUCache {
     }
 
     int get(int key) {
-        if (cache.find(key) != cache.end()) {
+        if (cache.find(key) != cache.end()) {   // We can also write cache[key] != nullptr, or cache.count(key) > 0
             Node* node = cache[key];
             moveToFront(node);
             return node->value;
