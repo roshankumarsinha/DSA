@@ -120,6 +120,16 @@
 //     printSubsequence(0, arr, temp);
 // }
 
+// You can write in another approach as well : This is more good. Mostly try to use this approach.
+// void printSubsequence(int idx, vector<int> &arr, vector<int> &temp, vectot<vector<int>> &res) {
+//     res.push_back(temp);
+//     for(int i = idx; i< arr.size(); i++) {
+//         temp.push_back(arr[i]);
+//         printSubsequence(i + 1, arr, temp, ans);
+//         temp.pop_back();
+//     }
+// }
+
 // Time Complexity : n*(2^n), n is to print all the elements in vector, so we will be javing 2^n vectors.
 
 // After this please study from Learn All Patterns of Subsequences (Theory).
