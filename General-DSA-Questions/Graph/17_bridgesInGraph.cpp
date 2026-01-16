@@ -21,7 +21,7 @@
 // Steps to solve the problem:
 // In order to find all the bridges of a graph, we will implement some logic over the DFS algorithm.
 // This is more of an algorithm-based approach. So, let’s discuss the algorithm in detail. Before that, we will discuss two important concepts of the algorithm i.e.time of insertion and lowest time of insertion.
-//    1.  Time of insertion: Dring the DFS call, the time when a node is visited, is called its time of insertion. For example, if in the above graph, we start DFS from node 0 it will visit node 0 first then node 1, node 2, and so on.
+//    1.  Time of insertion: During the DFS call, the time when a node is visited, is called its time of insertion. For example, if in the above graph, we start DFS from node 0 it will visit node 0 first then node 1, node 2, and so on.
 //        So, the time of insertion for node 0 will be 1, node 1 will be 2, node 2 will be 3 and it will continue like this. To store the time of insertion for each node, we will use a time array.
 //    2.  Lowest time of insertion: In this case, the current node refers to all its adjacent nodes "except the parent" and takes the minimum lowest time of insertion into account. To store this entity for each node, we will use another ‘low’ array.
 
