@@ -17,12 +17,14 @@ class AdjacencyListGraph {
   private:
     int V; // Number of vertices
     vector<list<int>> adjList; // Adjacency list
+    // vector<vector<int>> adjList; // Better to use vector<vector<int>> for adjaceny list
 
   public:
     // Constructor
     AdjacencyListGraph(int vertices) {
         V = vertices; // Set the number of vertices
         adjList.resize(V); // Resize the adjacency list to hold V lists
+        // adjList.resize(V, vector<int>());  // Resize the adjacency list to hold V lists
     }
 
     // Function to add an edge to the graph
