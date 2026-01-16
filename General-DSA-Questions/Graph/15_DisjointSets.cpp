@@ -45,7 +45,7 @@ class DisjointSet {
         rank.resize(n + 1, 0); // Initialize the rank array to 0
         size.resize(n + 1, 1); // Initialize the size array to 1
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i <= n; i++) {
             // Each node is its own parent initially
             parent[i] = i; // Initialize each node's parent to itself
         }
