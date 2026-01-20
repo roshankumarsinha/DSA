@@ -33,12 +33,11 @@ int moore(vector<int>& nums) {
     int candidate = 0;
     int count = 0;
     for (int value: nums) {
-        if (count == 0) {
-            candidate = value;
-        }
-        // You can also write this as count += (value == candidate) ? 1 : -1;
         if (value == candidate) {
             count++;
+        } else if (count == 0) {
+            candidate = value;
+            count = 1;
         } else {
             count--;
         }
