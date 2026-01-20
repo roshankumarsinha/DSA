@@ -148,16 +148,16 @@ Node* kReverse(Node* head, int k){
         // Reverse the nodes from
         // temp to the Kth node
         // The reversed linked list segment returns a modified list with `temp` now at its tail  and the `KthNode` pointing to its head.
-        reverseLinkedList(temp); 
+        Node* newHead = reverseLinkedList(temp); 
         
         // Adjust the head if the reversal
         // starts from the head
         if(temp == head){
-            head = kThNode;
+            head = newHead;
         }else{
             // Link the last node of the previous
             // group to the reversed group
-            prevLast -> next = kThNode; 
+            prevLast -> next = newHead; 
         }
 
         // Update the pointer to the
