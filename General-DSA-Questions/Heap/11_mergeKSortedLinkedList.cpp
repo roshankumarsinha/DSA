@@ -46,6 +46,10 @@ struct Compare {
 Node* mergeKSortedLists(vector<Node*>& lists) {
     // priority_queue<Type, Container, Comparator> name;
     priority_queue<Node*, vector<Node*>, Compare> minHeap; // Min-heap to store the nodes
+    // We can also do like :
+    // typedef pair<int, Node*> NodePair;
+    // priority_queue<NodePair, vector<NodePair>, greater<NodePair>> minHeap;
+    // In this we don't have to write a custom comparator.
 
     // Push the head of each linked list into the min-heap
     for (Node* list : lists) {
