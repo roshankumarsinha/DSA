@@ -119,14 +119,118 @@ int main() {
 // Space Complexity: O(1), as we are using only a constant amount of extra space
 
 
-// Count number of nice subarrays
-// Given an array of integers nums and an integer k. A subarray is called nice if there are k odd numbers on it.
-// Return the number of nice sub-arrays.
-// The problem is similar to the above problem where we need to count the number of subarrays with sum equal to goal.
-// So, to count the number of nice subarrays, we can convert the array such that all odd numbers are replaced with 1 and all even numbers are replaced with 0.
-// Then, we can use the same approach as above to count the number of subarrays with sum equal to k.
-// This approach will work because each odd number contributes 1 to the sum, and each even number contributes 0.
-// So, the sum of the subarray will be equal to the number of odd numbers in the subarray.
-// Hence, counting the number of subarrays with sum equal to k will give us the number of nice subarrays.
-// Hence we need to call countSubarraysWithSumAtMostGoal function with goal as k and k - 1 respectively and return their difference.
-// Notes link : https://takeuforward.org/data-structure/count-number-of-nice-subarrays
+
+/*
+    =====================================================
+    COUNT NUMBER OF NICE SUBARRAYS
+    =====================================================
+
+    Problem: Given an array of integers nums and an integer k.
+    A subarray is called "nice" if there are exactly k odd numbers in it.
+    Return the number of nice sub-arrays.
+
+    Notes link: https://takeuforward.org/data-structure/count-number-of-nice-subarrays
+
+    Example:
+    Input: nums = [1, 1, 2, 1, 1], k = 3
+    Output: 2
+    Explanation: Subarrays with 3 odd numbers are:
+    - [1, 1, 2, 1] (indices 0-3)
+    - [1, 2, 1, 1] (indices 1-4)
+
+    =====================================================
+    INTUITION:
+    =====================================================
+    
+    Key Insight: This problem is IDENTICAL to "Binary Subarray with Sum"!
+    
+    Transform the problem:
+    - Odd number  → 1 (counts as 1)
+    - Even number → 0 (counts as 0)
+    
+    After transformation:
+    - Sum of subarray = Count of odd numbers in subarray
+    - Finding subarrays with k odd numbers = Finding subarrays with sum = k
+    
+    Example: [1, 1, 2, 1, 1] with k = 3
+    Transform: [1, 1, 0, 1, 1] (odd→1, even→0)
+    Now find subarrays with sum = 3 ✓
+
+    =====================================================
+    APPROACH:
+    =====================================================
+    1. Use the same sliding window technique as Binary Subarray with Sum
+    2. Instead of using actual array values, use:
+       - 1 if nums[i] is odd (nums[i] % 2 == 1)
+       - 0 if nums[i] is even (nums[i] % 2 == 0)
+    3. Apply: count(sum ≤ k) - count(sum ≤ k-1) = count(sum == k)
+    
+    Optimization: We don't need to actually transform the array!
+    Just use (nums[i] % 2) which gives 1 for odd and 0 for even.
+
+    =====================================================
+    EXAMPLE DRY RUN:
+    =====================================================
+    Input: nums = [1, 1, 2, 1, 1], k = 3
+    
+    Transform to binary: [1, 1, 0, 1, 1]
+    
+    Step 1: Count subarrays with at most 3 ones (≤ 3)
+    
+    right=0: [1], sum=1, count = 0 + 1 = 1
+    right=1: [1,1], sum=2, count = 1 + 2 = 3
+    right=2: [1,1,0], sum=2, count = 3 + 3 = 6
+    right=3: [1,1,0,1], sum=3, count = 6 + 4 = 10
+    right=4: [1,1,0,1,1], sum=4 > 3, shrink left
+             [1,0,1,1], sum=3, count = 10 + 4 = 14
+    
+    Total ≤ 3: 14
+    
+    Step 2: Count subarrays with at most 2 ones (≤ 2)
+    
+    right=0: [1], sum=1, count = 0 + 1 = 1
+    right=1: [1,1], sum=2, count = 1 + 2 = 3
+    right=2: [1,1,0], sum=2, count = 3 + 3 = 6
+    right=3: [1,1,0,1], sum=3 > 2, shrink left
+             [1,0,1], sum=2, count = 6 + 3 = 9
+    right=4: [1,0,1,1], sum=3 > 2, shrink left
+             [0,1,1], sum=2, count = 9 + 3 = 12
+    
+    Total ≤ 2: 12
+    
+    Result: 14 - 12 = 2 ✓
+
+    =====================================================
+    TIME COMPLEXITY:  O(n) - Each element processed at most twice
+    SPACE COMPLEXITY: O(1) - Only using variables
+    =====================================================
+*/
+
+int countSubarraysWithAtMostKOdd(const vector<int>& nums, int k) {
+    if (k < 0) return 0;  // No subarrays with negative count of odd numbers
+    
+    int left = 0;
+    int oddCount = 0;  // Count of odd numbers in current window
+    int count = 0;
+    
+    for (int right = 0; right < nums.size(); right++) {
+        // Add contribution of right element (1 if odd, 0 if even)
+        oddCount += nums[right] % 2;    // We can also write oddCount = oddCount + (nums[right] % 2)
+        
+        // Shrink window while oddCount exceeds k
+        while (oddCount > k && left <= right) {
+            oddCount -= nums[left] % 2;
+            left++;
+        }
+        
+        // All subarrays ending at 'right' with at most k odd numbers
+        count += (right - left + 1);
+    }
+    
+    return count;
+}
+
+int numberOfNiceSubarrays(vector<int>& nums, int k) {
+    // Subarrays with exactly k odd = (at most k odd) - (at most k-1 odd)
+    return countSubarraysWithAtMostKOdd(nums, k) - countSubarraysWithAtMostKOdd(nums, k - 1);
+}
