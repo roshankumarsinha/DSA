@@ -50,14 +50,14 @@ vector<vector<int>> threeSum(vector<int>& nums) {
                 // Found a triplet
                 result.push_back({nums[i], nums[left], nums[right]});
                 
+                // Move both pointers inward
+                left++;
+                right--;
+
                 // Skip duplicate elements for the second element of the triplet
                 while (left < right && nums[left] == nums[left - 1]) left++;
                 // Skip duplicate elements for the third element of the triplet
                 while (left < right && nums[right] == nums[right + 1]) right--;
-                
-                // Move both pointers inward
-                left++;
-                right--;
             }
         }
     }
