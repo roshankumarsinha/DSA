@@ -63,22 +63,26 @@
     =====================================================
     1. Initialize prefixSum = 0, maxLen = 0
     2. Create hashmap: {prefixSum → index}
+    3. IMPORTANT: Initialize map[0] = -1 (empty prefix has sum 0)
     3. For each index i:
        a. prefixSum += arr[i]
-       b. If prefixSum == k → maxLen = i + 1
        c. If (prefixSum - k) in map → maxLen = max(maxLen, i - map[prefixSum-k])
        d. If prefixSum NOT in map → store {prefixSum: i}
     4. Return maxLen
 
+    Why map[0] = -1?
+    - If prefixSum itself equals k, we need (prefixSum - k = 0) to exist
+    - This represents a subarray from index 0 to current index
+
     =====================================================
     EXAMPLE DRY RUN:
     =====================================================
-    Input: arr = [1, -1, 5, -2, 3], k = 3
+    Input: arr = [1, -1, 5, -2, 3], k = 3, map={0:-1}
 
-    i=0: prefixSum=1, need=-2 (not found), map={1:0}
-    i=1: prefixSum=0, need=-3 (not found), map={1:0, 0:1}
-    i=2: prefixSum=5, need=2 (not found), map={1:0, 0:1, 5:2}
-    i=3: prefixSum=3, prefixSum==k! → maxLen=4, map={1:0, 0:1, 5:2, 3:3}
+    i=0: prefixSum=1, need=-2 (not found), map={0:-1, 1:0}
+    i=1: prefixSum=0, need=-3 (not found), map={0:-1, 1:0, 0:1}
+    i=2: prefixSum=5, need=2 (not found), map={0:-1, 1:0, 0:1, 5:2}
+    i=3: prefixSum=3, need=0, (found at -1) → len=3-(-1)=4, maxLen=4, map={0:-1, 1:0, 0:1, 5:2, 3:3}
     i=4: prefixSum=6, need=3 (found at 3) → len=4-3=1, maxLen stays 4
 
     Output: 4 ✓ (Subarray [1, -1, 5, -2] from index 0 to 3)
@@ -96,18 +100,14 @@ using namespace std;
 
 int longestSubarrayWithSumK(vector<int>& arr, int k) {
     unordered_map<int, int> prefixMap;  // {prefixSum: earliest index}
+    prefixMap[0] = -1;   // IMPORTANT: Empty Prefix with sum o
     int prefixSum = 0;
     int maxLen = 0;
     
     for (int i = 0; i < arr.size(); i++) {
         prefixSum += arr[i];
         
-        // Case 1: Entire subarray from 0 to i has sum = k
-        if (prefixSum == k) {
-            maxLen = i + 1;
-        }
-        
-        // Case 2: Check if (prefixSum - k) exists
+        // Case : Check if (prefixSum - k) exists
         int need = prefixSum - k;
         if (prefixMap.find(need) != prefixMap.end()) {
             int len = i - prefixMap[need];
