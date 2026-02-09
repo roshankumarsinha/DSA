@@ -75,6 +75,8 @@
     =====================================================
 */
 
+// find() returns the index of the first occurrence of the substring, or string::npos if not found
+
 #include <iostream>
 #include <string>
 using namespace std;
