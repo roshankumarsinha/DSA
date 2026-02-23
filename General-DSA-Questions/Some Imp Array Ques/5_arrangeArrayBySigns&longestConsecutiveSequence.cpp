@@ -108,8 +108,6 @@ vector<int> rearrangeBySign(vector<int>& arr) {
 
 
 
-
-
 /*
     =====================================================
     LONGEST CONSECUTIVE SEQUENCE IN AN ARRAY
@@ -231,7 +229,7 @@ int longestConsecutive(vector<int>& nums) {
             int currentLen = 1;
             
             // Count consecutive elements
-            while (numMap.find(currentNum + 1) != numMap.end()) {
+            while (numMap.find(currentNum + 1) != numMap.end()) {   // We can also write: while (numMap[currentNum + 1]) since default is false for missing keys
                 currentNum++;
                 currentLen++;
             }

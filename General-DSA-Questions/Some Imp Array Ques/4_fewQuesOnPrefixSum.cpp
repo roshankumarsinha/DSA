@@ -100,7 +100,7 @@ using namespace std;
 
 int longestSubarrayWithSumK(vector<int>& arr, int k) {
     unordered_map<int, int> prefixMap;  // {prefixSum: earliest index}
-    prefixMap[0] = -1;   // IMPORTANT: Empty Prefix with sum o
+    prefixMap[0] = -1;   // IMPORTANT: Empty Prefix with sum 0
     int prefixSum = 0;
     int maxLen = 0;
     
@@ -109,22 +109,19 @@ int longestSubarrayWithSumK(vector<int>& arr, int k) {
         
         // Case : Check if (prefixSum - k) exists
         int need = prefixSum - k;
-        if (prefixMap.find(need) != prefixMap.end()) {
+        if (prefixMap.find(need) != prefixMap.end()) {  // We can also write: if (prefixMap[need] != 0) since default is 0 for missing keys, but this fails when need=0, so we use find() to check existence
             int len = i - prefixMap[need];
             maxLen = max(maxLen, len);
         }
         
         // Store prefixSum only if not already present (keep earliest index)
-        if (prefixMap.find(prefixSum) == prefixMap.end()) {
+        if (prefixMap.find(prefixSum) == prefixMap.end()) { // We can also write: if (prefixMap[prefixSum] == 0) since default is 0 for missing keys, but this fails when prefixSum=0, so we use find() to check existence
             prefixMap[prefixSum] = i;
         }
     }
     
     return maxLen;
 }
-
-
-
 
 
 
@@ -433,8 +430,6 @@ int countSubarraysWithEqual0sAnd1s(vector<int>& arr) {
     
     return count;
 }
-
-
 
 
 /*
