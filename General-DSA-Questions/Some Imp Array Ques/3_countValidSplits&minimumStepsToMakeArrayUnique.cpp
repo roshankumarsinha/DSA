@@ -285,7 +285,7 @@ int minIncrementForUnique(vector<int>& arr) {
     int operations = 0;
     // Fixed upper bound: maxVal + n covers worst case (all elements same value)
     for (int i = 0; i < maxVal + (int)arr.size(); i++) {
-        if (freqMap.count(i) && freqMap[i] > 1) {
+        if (freqMap.count(i) && freqMap[i] > 1) {   // We can also write: if (freqMap[i] > 1) since default is 0 for missing keys
             int duplicates = freqMap[i] - 1;    // Number of duplicates at value i
             operations += duplicates;   // Each duplicate needs 1 operation to move to next value
             freqMap[i + 1] += duplicates;  // Push duplicates to next value
