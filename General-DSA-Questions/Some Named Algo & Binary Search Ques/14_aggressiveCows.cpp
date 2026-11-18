@@ -3,8 +3,9 @@
 //  1.  An array stalls[] representing positions of n stalls along a straight line.
 //  2.  An integer k representing the number of cows.
 // Goal: Place k cows in these stalls such that the minimum distance between any two cows is maximized.
+// Note: Value of k is always less than or equal to n.
 
-// Notes link : https://takeuforward.org/data-structure/aggressive-cows-detailed-solution/
+// Notes link : https://takeuforward.org/blogs/data-structure-and-algorithm/aggressive-cows
 // Video link : https://www.youtube.com/watch?v=R_Mfw4ew-Vo&list=PLgUwDviBIf0pMFMWuuvDNMAkoQFi-h0ZF&index=18
 
 // Example:

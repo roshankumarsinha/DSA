@@ -8,7 +8,7 @@
 //    Each book is assigned to exactly one student.
 //    Goal: Minimize the maximum number of pages assigned to a student.
 
-// Notes link : https://takeuforward.org/data-structure/allocate-minimum-number-of-pages/
+// Notes link : https://takeuforward.org/blogs/data-structure-and-algorithm/book-allocation-problem
 // Video link : https://www.youtube.com/watch?v=Z0hwjftStI4
 
 

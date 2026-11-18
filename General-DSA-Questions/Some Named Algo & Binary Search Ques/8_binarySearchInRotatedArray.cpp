@@ -65,7 +65,7 @@ int main() {
 // Input: nums = [2, 2, 2, 3, 4, 2], target = 3
 // Output: 3
 
-// Notes : https://takeuforward.org/arrays/search-element-in-rotated-sorted-array-ii/
+// Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/search-in-rotated-sorted-array-ii
 
 // How to handle duplicates in rotated sorted array:
 // 1. If left, mid, and right elements are equal, increment left and decrement right.
