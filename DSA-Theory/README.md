@@ -733,7 +733,7 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             </ul>
         </li>
         <li>
-            You can find notes on Trees here: <a href="https://takeuforward.org/binary-tree/introduction-to-trees/">Tree Data Structure</a>
+            You can find notes on Trees here: <a href="https://takeuforward.org/blogs/data-structure-and-algorithm/binary-tree-data-structure">Tree Data Structure</a>
         </li>
         <li>
             You can find custom notes using ChatGpt on Trees here: <a href="https://chatgpt.com/share/686b5897-c4cc-8006-9a1d-5496571273bb">Tree Data Structure</a>
@@ -758,7 +758,7 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
                 <li>For guaranteed efficiency, Self-Balancing BSTs like AVL trees or Red-Black trees are used.</li>
             </ul>
         </li>
-        <li>https://takeuforward.org/binary-search-tree/introduction-to-binary-search-trees/</li>
+        <li>https://takeuforward.org/blogs/data-structure-and-algorithm/binary-search-tree</li>
         <h1>Heap :-</h1>
         <li>A Heap is a binary tree-based data structure that satisfies the heap property.</li>
         <li>
@@ -893,7 +893,7 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             </table>
         </li>
         <li>
-            You can find notes on Trie in C++ here: <a href="https://takeuforward.org/data-structure/implement-trie-1/">Trie in C++</a>
+            You can find notes on Trie in C++ here: <a href="https://takeuforward.org/blogs/data-structure-and-algorithm/trie-implementation">Trie in C++</a>
         </li>
         <li>
             You can find custom notes using chatgpt here: <a href="https://chatgpt.com/share/6863d9ca-db2c-8006-9100-10cb0f692d74">Trie Implementation in C++</a>
@@ -932,7 +932,7 @@ int divide = x >> 1;    // Equivalent to 4 / 2^1 = 2
             </ul>
         </li>
         <li>
-            You can find notes on graph in C++ here: <a href="https://takeuforward.org/graph/introduction-to-graph/">Graph in C++</a>
+            You can find notes on graph in C++ here: <a href="https://takeuforward.org/blogs/data-structure-and-algorithm/introduction-to-graph">Graph in C++</a>
         </li>
         <li>
             You can find custom notes using chatgpt here: <a href="https://chatgpt.com/share/684e7fc7-85ec-8006-87b0df7437dc1af5">Graph Implementation in C++</a>

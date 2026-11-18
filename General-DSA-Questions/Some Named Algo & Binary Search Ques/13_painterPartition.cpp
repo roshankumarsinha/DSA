@@ -8,7 +8,7 @@
 //  2.  Start painting immediately after the previous one finishes or simultaneously (parallel painting).
 // Goal: Assign boards to k painters so that the time to paint all boards is minimized.
 
-// Notes : https://takeuforward.org/arrays/painters-partition-problem/
+// Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/painters-partition-problem/
 
 // Example:
 // Input: arr[] = {10, 20, 30, 40}, k = 2
@@ -33,8 +33,8 @@
 // 2nd Subarray: [40] → sum = 40
 // The maximum sum among these subarrays is 60, which is minimized.
 
-// Notes : https://takeuforward.org/arrays/split-array-largest-sum/
+// Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/split-array-largest-sum
 
 
 // Both the problems are same and it is same as the "Allocate Minimum Number of Pages" problem.
-// Whereever in question we have to find Minimize the Maximum Sum, please think about binary search taking example of Allocate Minimum Number of Pages problem.
+// WhereEver in question we have to find Minimize the Maximum Sum, please think about binary search taking example of Allocate Minimum Number of Pages problem.

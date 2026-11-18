@@ -77,6 +77,15 @@ int main() {
         }
         cout << "]\n";
     }
+
+    // The above printing part we can rewrite as :
+    // for (auto triplet : triplets) {
+    //     cout << "[";
+    //     for (auto num : triplet) {
+    //         cout << num << ", ";
+    //     }
+    //     cout << "]\n";
+    // }
     
     return 0;
 }

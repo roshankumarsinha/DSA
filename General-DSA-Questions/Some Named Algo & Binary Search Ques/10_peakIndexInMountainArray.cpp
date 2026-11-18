@@ -5,7 +5,7 @@
 // So, there's a peak element somewhere in the middle. You need to find the index of the peak element.
 
 // Video link : https://www.youtube.com/watch?v=cXxmbemS6XM
-// Notes link : https://takeuforward.org/data-structure/peak-element-in-array
+// Notes link : https://takeuforward.org/blogs/data-structure-and-algorithm/find-a-peak-element-in-an-array
 
 // Example :
 // Input: num = [1, 2, 3, 4, 5, 4, 3, 2]
