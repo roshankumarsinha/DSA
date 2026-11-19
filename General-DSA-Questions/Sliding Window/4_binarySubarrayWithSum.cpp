@@ -1,7 +1,7 @@
 // You are given a binary array nums (containing only 0s and 1s) and an integer goal.
 // Return the number of non-empty subarrays of nums that sum to goal. A subarray is a contiguous part of the array.
 
-// Notes link : https://takeuforward.org/data-structure/binary-subarray-with-sum
+// Notes link : https://takeuforward.org/blogs/data-structure-and-algorithm/binary-subarrays-with-sum
 
 // Intuition:
 // We can use the sliding window technique to solve this problem efficiently.

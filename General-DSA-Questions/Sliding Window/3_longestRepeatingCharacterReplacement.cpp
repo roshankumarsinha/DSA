@@ -2,7 +2,7 @@
 // In one operation, you can choose any character of the string and change it to any other uppercase English character.
 // Find the length of the longest substring containing all repeating letters you can get after performing the above operations.
 
-// Notes link : https://takeuforward.org/data-structure/longest-repeating-character-replacement
+// Notes link : https://takeuforward.org/blogs/data-structure-and-algorithm/longest-repeating-character-replacement
 
 // Intuition:
 // We can use the sliding window technique to solve this problem efficiently.

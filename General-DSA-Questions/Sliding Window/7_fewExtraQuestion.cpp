@@ -1,7 +1,7 @@
 // Longest Substring with At Most K Distinct Characters
 // Given a string s and an integer k, return the length of the longest substring of s that contains at most k distinct characters.
 
-// Notes link : https://takeuforward.org/data-structure/longest-substring-with-at-most-k-distinct-characters
+// Notes link : https://takeuforward.org/blogs/data-structure-and-algorithm/longest-substring-with-at-most-k-distinct-characters
 
 // Intuition:
 // We can use the sliding window technique to solve this problem efficiently.
@@ -71,7 +71,7 @@ int lengthOfLongestSubstringKDistinct(string s, int k) {
 // Given an array nums and an integer k, return the number of good subarrays of nums.
 // A good array is an array where the number of different integers in that array is exactly k.
 
-// Notes link : https://takeuforward.org/data-structure/subarray-with-k-different-integers
+// Notes link : https://takeuforward.org/blogs/data-structure-and-algorithm/subarrays-with-k-different-integers
 
 // Intuition:
 // We can use the sliding window technique to solve this problem efficiently.
