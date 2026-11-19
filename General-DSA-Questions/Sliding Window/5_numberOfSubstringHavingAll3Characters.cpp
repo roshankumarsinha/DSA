@@ -1,7 +1,7 @@
 // Given a string s , consisting only of characters 'a' , 'b' , 'c'.
 // Find the number of substrings that contain at least one occurrence of all these characters 'a' , 'b' , 'c'.
 
-// Notes link : https://takeuforward.org/data-structure/number-of-substring-containing-all-three-characters
+// Notes link : https://takeuforward.org/blogs/data-structure-and-algorithm/count-substrings-containing-all-three-characters-a-b-and-c
 
 // Intuition:
 // We can use the sliding window technique to solve this problem efficiently.

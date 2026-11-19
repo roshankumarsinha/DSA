@@ -1,6 +1,6 @@
 // Given a string s, find the length of the longest substring without repeating characters.
 
-// Notes link : https://takeuforward.org/data-structure/length-of-longest-substring-without-any-repeating-character
+// Notes link : https://takeuforward.org/blogs/data-structure-and-algorithm/longest-substring-without-repeating-characters
 
 // Example 1:
 // Input: s = "cadbzabcd"

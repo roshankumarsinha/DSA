@@ -37,7 +37,7 @@
 //    b. Update maxScore if the current sum is greater than maxScore.
 
 
-
+// This is Approach 1 implementation in C++:
 #include <iostream>
 #include <vector>
 #include <climits>  // for INT_MAX

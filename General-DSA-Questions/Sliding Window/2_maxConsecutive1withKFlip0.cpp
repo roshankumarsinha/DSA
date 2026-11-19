@@ -1,6 +1,6 @@
 // Given a binary array(array consisting of only 0s and 1s) nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
 
-// Notes link : https://takeuforward.org/data-structure/max-consecutive-ones-iii
+// Notes link : https://takeuforward.org/blogs/data-structure-and-algorithm/max-consecutive-ones-iii
 
 // Intuition:
 // Think like if we need to find the longest subarray with at most k zeros.
