@@ -1,7 +1,7 @@
 // Given an array arr[] of size n, for each element arr[i], find the next greater element to the right.
 // If no such element exists, return -1.
 
-// Notes : https://takeuforward.org/data-structure/next-greater-element-using-stack/
+// Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/next-greater-element
 
 // Intuition: (Use Monotonic Decreasing Stack : top of stack has the smallest of the larger elements seen so far)
 // 1. You process from right to left so that you’ve already seen future values.

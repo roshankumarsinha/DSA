@@ -1,6 +1,6 @@
 // Write a function to check if the parentheses in a string are balanced in C++.
 
-// Notes : https://takeuforward.org/data-structure/check-for-balanced-parentheses/
+// Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/check-balanced-parentheses-using-a-stack
 
 // String can contain '(', ')', '{', '}', '[' and ']'
 // String is balanced if every opening bracket has a corresponding closing bracket in the correct order.

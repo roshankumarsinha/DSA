@@ -1,6 +1,6 @@
 // Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in histogram.
 
-// Notes : https://takeuforward.org/data-structure/area-of-largest-rectangle-in-histogram/
+// Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/largest-rectangle-in-histogram
 
 // Example :
 // Input:  [2, 1, 5, 6, 2, 3]

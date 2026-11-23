@@ -1,6 +1,8 @@
 // Given a circular array arr[], for each element arr[i], find the next greater element, wrapping around to the beginning if needed.
 // If no such element exists, return -1.
 
+// Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/next-greater-element-ii-circular-array
+
 // Approach:
 // 1. We can use similar logic to the next greater element problem, but we need to handle the circular nature of the array.
 // 2. We can simulate the circular array by iterating through the array twice.

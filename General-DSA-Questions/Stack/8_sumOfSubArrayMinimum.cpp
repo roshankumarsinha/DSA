@@ -1,7 +1,7 @@
 // Given an array of integers arr, return the sum of the minimum value of all subarrays of arr.
 // Since the answer can be large, return the result modulo 10^9 + 7.
 
-// Notes link : https://takeuforward.org/data-structure/sum-of-subarray-minimums
+// Notes link : https://takeuforward.org/blogs/data-structure-and-algorithm/sum-of-subarray-minimums
 // Video link : https://www.youtube.com/watch?v=v0e8p9JCgRc
 
 // Example :
