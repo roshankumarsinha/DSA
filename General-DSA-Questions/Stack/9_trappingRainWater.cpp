@@ -1,6 +1,6 @@
 // Given n non-negative integers representing the elevation map (heights of bars), compute how much water can be trapped after raining.
 
-// Notes : https://takeuforward.org/data-structure/trapping-rainwater/
+// Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/trapping-rain-water
 // Video link : https://www.youtube.com/watch?v=ZI2z5pq0TqA
 
 // Example:

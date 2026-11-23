@@ -43,7 +43,7 @@
 // 4. Pop : While making pop we will check if the top value is lesser than min, If it is then we must update our min to its previous value. In order to do that min = (2 * min) - (modified value) and we will pop the element.
 
 // How we derive this formula?
-// 1. Wehen we are pushing a modified value, we are essentially storing the difference between the current value and the previous minimum.
+// 1. When we are pushing a modified value, we are essentially storing the difference between the current value and the previous minimum.
 //    Modified value = 2 * CurrentValue - PreviousMin.
 // 2. When we pop, if the popped value is modified, we can retrieve the previous minimum using the formula: PreviousMin = 2 * CurrentMin - PoppedValue. But PoppedValue is the modified value.
 //    so, PreviousMin = 2 * CurrentMin - (2 * CurrentValue - PreviousMin) = PreviousMin.
