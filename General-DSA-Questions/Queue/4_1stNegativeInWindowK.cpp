@@ -84,7 +84,9 @@ int main() {
 
 // The above approach has a time complexity of O(n) and a space complexity of O(k), where n is the number of elements in the array and k is the window size. The algorithm uses a deque to store the indices of negative numbers in the current window.
 
-// We can solve this problem with space complexity of O(1) using a two-pointer approach. The idea is to maintain two pointers, start and end, to represent the current window. We will iterate over the array and slide the window one element at a time. At each step, we will check if the current element is negative and update the result accordingly.
+// We can solve this problem with space complexity of O(1) using a two-pointer approach. The idea is to maintain two pointers, start and end, to represent the current window.
+// We will iterate over the array and slide the window one element at a time.
+// At each step, we will check if the current element is negative and update the result accordingly.
 
 // Approach
 // 1.   Use a variable to keep track of the index of the first negative integer in the current window.
