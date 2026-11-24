@@ -80,9 +80,13 @@ class Twitter {
  * obj->unfollow(followerId,followeeId);
  */
 int main() {
-    Twitter* twitter = new Twitter();
+    Twitter* twitter = new Twitter();   // It's not necessary to create a new Twitter object with pointer,
+                                        // we can also create it as a normal object like Twitter twitter; and then use twitter.postTweet() etc.
+                                        // When we create it as a pointer, we need to use '->' to access the methods, and when we create it as a normal object, we use '.' to access the methods.
+                                        // Difference between creating an object with pointer and normal object is that when we create an object with pointer,
+                                        // it is created in the heap memory, and when we create a normal object, it is created in the stack memory.
 
-    twitter->postTweet(1, 5);
+    twitter->postTweet(1, 5);   // If object is created as normal object, we can use twitter.postTweet(1, 5); instead of twitter->postTweet(1, 5);
     vector<int> feed1 = twitter->getNewsFeed(1); // Should return [5]
     for (int tweetId : feed1) {
         cout << tweetId << " ";

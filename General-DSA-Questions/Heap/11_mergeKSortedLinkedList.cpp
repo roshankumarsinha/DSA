@@ -7,7 +7,7 @@
 // 2. Push the head of each linked list into the heap.
 // 3. While the heap is not empty:
 //    a.  Pop the smallest node.
-//    b. Add it to the merged list.
+//    b.  Add it to the merged list.
 //    c.  If the popped node has a next, push it into the heap.
 // 4. Return the merged linked list.
 // 5. Time Complexity: O(N log K)
