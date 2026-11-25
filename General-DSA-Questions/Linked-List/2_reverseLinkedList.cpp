@@ -1,6 +1,6 @@
 // Write a function to reverse a linked list
 
-// Notes (Check Optimal Approach 1) : https://takeuforward.org/data-structure/reverse-a-linked-list/
+// Notes (Check Optimal Approach 1) : https://takeuforward.org/blogs/data-structure-and-algorithm/reverse-a-singly-linked-list
 
 #include <iostream>
 

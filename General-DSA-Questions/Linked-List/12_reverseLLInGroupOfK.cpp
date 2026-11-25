@@ -3,7 +3,7 @@
 // If the Linked List is: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 // and k = 3, the output should be: 3 -> 2 -> 1 -> 6 -> 5 -> 4 -> 9 -> 8 -> 7 -> 10
 
-// Notes : https://takeuforward.org/data-structure/reverse-linked-list-in-groups-of-size-k/
+// Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/reverse-linked-list-k-groups
 
 // Intiution without recursion:
 // The approach simplifies reversing linked list nodes by breaking the list into segments of K nodes and reversing each segment individually.
@@ -116,12 +116,10 @@ Node* kReverse(Node* head, int k){
     
     // Traverse through the linked list
     while(temp != NULL){
-        // Get the Kth node of the current group
-        // This function returns the Kth node from the current position
-        // If Kth node is NULL, it means the group is not complete
-        // and we should not reverse it, it will return NULL
-        // If Kth node is not NULL, we will reverse the nodes from temp to Kth node
-        // and link it to the previous group
+        // Get the Kth node of the current group.
+        // This function returns the Kth node from the current position.
+        // If Kth node is NULL, it means the group is not complete and we should not reverse it, it will return NULL.
+        // If Kth node is not NULL, we will reverse the nodes from temp to Kth node and link it to the previous group.
         Node* kThNode = getKthNode(temp, k); 
 
         // If the Kth node is NULL
@@ -145,13 +143,11 @@ Node* kReverse(Node* head, int k){
         // to prepare for reversal
         kThNode -> next = NULL; 
 
-        // Reverse the nodes from
-        // temp to the Kth node
+        // Reverse the nodes from temp to the Kth node.
         // The reversed linked list segment returns a modified list with `temp` now at its tail  and the `KthNode` pointing to its head.
         Node* newHead = reverseLinkedList(temp); 
         
-        // Adjust the head if the reversal
-        // starts from the head
+        // Adjust the head if the reversal starts from the head
         if(temp == head){
             head = newHead;
         }else{

@@ -7,7 +7,6 @@
 // 4. We continue this process until we reach the end of the list.
 
 #include <iostream>
-
 using namespace std;
 
 struct Node {

@@ -1,7 +1,6 @@
 // Write a function to merge two sorted linked lists into a single sorted linked list. The function should return the head of the merged list.
 
 #include <iostream>
-
 using namespace std;
 
 struct Node {

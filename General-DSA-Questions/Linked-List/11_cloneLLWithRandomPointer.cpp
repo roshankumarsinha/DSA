@@ -2,7 +2,7 @@
 
 // The random pointer can point to any node in the linked list or be NULL.
 
-// Notes : https://takeuforward.org/data-structure/clone-linked-list-with-random-and-next-pointer/
+// Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/clone-linked-list-random-pointer
 
 // Approach 1 : Using unordered_map
 // 1. Create a mapping of original nodes to cloned nodes using an unordered_map.

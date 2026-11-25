@@ -1,6 +1,6 @@
 // Write a function to remove a loop in a linked list. If a loop is detected, remove the loop and return true; otherwise, return false.
 
-// Notes : https://takeuforward.org/data-structure/starting-point-of-loop-in-a-linked-list/
+// Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/find-start-of-cycle-linked-list
 
 #include <iostream>
 
@@ -115,4 +115,5 @@ int main() {
 //      2(x + y) = x + y + kC
 //      => x + y = kC
 //      => which means x + y is a multiple of C. i.e., x + y is kind of total distance of complete cycle.
-//      => From this we can say that if we move slow pointer to head and when it covers distance x, so that means even fast pointer which is at meeting point should also have covered x distance. So, when slow pointer and fast pointer move with same speed they will meet at start of cycle. Since fast pointer has already covered y distance from start of cycle to meeting point, so when it covers x distance it will be at start of cycle.
+//      => From this we can say that if we move slow pointer to head and when it covers distance x, so that means even fast pointer which is at meeting point should also have covered x distance.
+//         So, when slow pointer and fast pointer move with same speed they will meet at start of cycle. Since fast pointer has already covered y distance from start of cycle to meeting point, so when it covers x distance it will be at start of cycle.

@@ -1,6 +1,6 @@
 // Write a function to do merge sort on a linked list.
 
-// Notes : https://takeuforward.org/linked-list/sort-a-linked-list
+// Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/sort-a-linked-list-using-merge-sort
 
 // Approach:
 // 1. We will use exactly the same approach as we use to merge sort an array.
@@ -11,7 +11,6 @@
 
 
 #include <iostream>
-
 using namespace std;
 
 // Node class represents a
