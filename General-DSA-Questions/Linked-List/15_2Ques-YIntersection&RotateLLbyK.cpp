@@ -2,6 +2,8 @@
 // Problem Statement: Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect.
 // If the two linked lists have no intersection at all, return null.
 
+// Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/intersection-of-two-linked-lists
+
 // Intiution:
 // 1. Calculate the lengths of both linked lists. Say the lengths are lenA and lenB.
 // 2. Find the difference in lengths, say d = |lenA - lenB|.
@@ -13,6 +15,8 @@
 
 // Question 2 : Rotate a Linked List
 // Problem Statement: Given the head of a linked list, rotate the list to the right by k places and return the new head of the rotated list.
+
+// Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/rotate-linked-list-right-k-places
 
 // Intiution:
 // 1. Calculate the length of the linked list, say len.

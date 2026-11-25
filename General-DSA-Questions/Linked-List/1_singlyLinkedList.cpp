@@ -1,9 +1,8 @@
 // Implement Singly Linked List
 
-// Notes for Theory of Linked List: https://takeuforward.org/linked-list/linked-list-introduction
+// Notes for Theory of Linked List: https://takeuforward.org/blogs/data-structure-and-algorithm/singly-linked-list
 
 #include<iostream>
-
 using namespace std;
 
 class Node {

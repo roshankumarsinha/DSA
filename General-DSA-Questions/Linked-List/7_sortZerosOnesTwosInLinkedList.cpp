@@ -6,7 +6,6 @@
 
 // Solving using Approach 2:
 #include <iostream>
-
 using namespace std;
 
 struct Node {

@@ -1,6 +1,6 @@
 // Write a function to find the middle of a linked list, if the number of nodes is odd, return the middle node. If the number of nodes is even, return the second middle node.
 
-//  Notes : https://takeuforward.org/data-structure/find-middle-element-in-a-linked-list/
+//  Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/find-middle-of-linked-list
 
 #include <iostream>
 

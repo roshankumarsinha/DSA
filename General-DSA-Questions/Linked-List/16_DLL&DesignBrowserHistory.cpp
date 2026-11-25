@@ -1,6 +1,6 @@
 // Notes are :-
 
-// 1. https://takeuforward.org/linked-list/introduction-to-doubly-linked-list
+// 1. https://takeuforward.org/blogs/data-structure-and-algorithm/doubly-linked-list
 // 2. Inserting into DLL : https://takeuforward.org/data-structure/insert-at-end-of-doubly-linked-list/
 // 3. Deleting from DLL : https://takeuforward.org/data-structure/delete-last-node-of-a-doubly-linked-list/
 

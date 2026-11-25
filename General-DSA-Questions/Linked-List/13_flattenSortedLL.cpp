@@ -1,6 +1,6 @@
 // Write a C++ code to flatten a multilevel sorted linked list.
 
-// Notes : https://takeuforward.org/data-structure/flattening-a-linked-list/
+// Notes : https://takeuforward.org/blogs/data-structure-and-algorithm/flatten-linked-list
 
 // You are given a special linked list where:
 // Each node has:
@@ -50,8 +50,7 @@ public:
 // Merges two linked lists in a particular
 // order based on the data value
 Node* merge(Node* list1, Node* list2){
-    // Create a dummy node as a
-    // placeholder for the result
+    // Create a dummy node as a placeholder for the result
     Node* dummyNode = new Node(-1);
     Node* res = dummyNode;
 
@@ -91,14 +90,12 @@ Node* merge(Node* list1, Node* list2){
 
 // Flattens a linked list with child pointers
 Node* flattenLinkedList(Node* head){
-    // If head is null or there 
-    // is no next node, return head
+    // If head is null or there  is no next node, return head
     if(head == NULL || head->next == NULL){
         return head;
     }
 
-    // Recursively flatten the
-    // rest of the linked list
+    // Recursively flatten the rest of the linked list
     Node* mergedHead = flattenLinkedList(head->next);
     head = merge(head, mergedHead);
     return head;
