@@ -13,9 +13,8 @@
 //
 // INTUITION:
 // -----------
-// Think of it like filling a shopping cart where you can buy unlimited quantities
-// of each item. At each step, you look at items from a certain position onwards
-// and decide which one to add to your cart.
+// Think of it like filling a shopping cart where you can buy unlimited quantities of each item.
+// At each step, you look at items from a certain position onwards and decide which one to add to your cart.
 //
 // The key insight is: once you decide to stop buying item X, you never go back to it.
 // This prevents counting [2,3] and [3,2] as different combinations.
@@ -114,8 +113,8 @@ public:
 //   1. "Should I take this item?" (PICK)
 //   2. "Should I skip this item forever?" (NOT-PICK)
 //
-// This is a classic recursion pattern used in many problems like subset sum,
-// knapsack, etc. The beauty is that it breaks down the problem into binary choices.
+// This is a classic recursion pattern used in many problems like subset sum, knapsack, etc.
+// The beauty is that it breaks down the problem into binary choices.
 //
 // WHY BINARY DECISIONS?
 // ---------------------
@@ -135,9 +134,8 @@ public:
 //
 // WHY MOVE TO NEXT INDEX ON NOT-PICK?
 // -----------------------------------
-// When we decide NOT to pick an element, we're saying "I don't want ANY more
-// of this element in my combination". So we move to the next index forever.
-// This prevents duplicates and ensures we explore all unique combinations.
+// When we decide NOT to pick an element, we're saying "I don't want ANY more of this element in my combination".
+// So we move to the next index forever. This prevents duplicates and ensures we explore all unique combinations.
 //
 // BASE CASE DIFFERENCE FROM APPROACH 1:
 // -------------------------------------
@@ -178,22 +176,57 @@ public:
 //
 // Result: [[2,2,2], [3,3]]
 //
-// TRACE for [2,3,6,7], target=7:
-// -------------------------------
-// solve(ind=0, t=7, [])
-//   -> PICK 2: solve(ind=0, t=5, [2])
-//        -> PICK 2: solve(ind=0, t=3, [2,2])
-//             -> PICK 2: solve(ind=0, t=1, [2,2,2])
-//                  -> PICK 2: 2>1, skip
-//                  -> NOT-PICK: solve(ind=1, t=1, [2,2,2])
-//                       -> PICK 3: 3>1, skip
-//                       -> NOT-PICK: ... eventually fails
-//             -> NOT-PICK: solve(ind=1, t=3, [2,2])
-//                  -> PICK 3: solve(ind=1, t=0, [2,2,3]) -> ✅ Found [2,2,3]
-//   -> NOT-PICK: solve(ind=1, t=7, [])
-//        -> ... eventually finds [7] via NOT-PICK path to index 3
+
+// FULL RECURSION TREE — Solution2 (Pick / Not-Pick)
+// arr = [2,3], target = 6, arr.size() = 2
+// Node format: [n] solve(ind, t, ds)     [n] = order of the call
+// ✂️ = PICK not allowed (arr[ind] > t), so no call happens
 //
-// Final Result: [[2,2,3], [7]]
+// [1] solve(ind=0, t=6, ds=[])
+// ├── PICK 2 → [2] solve(ind=0, t=4, ds=[2])
+// │   ├── PICK 2 → [3] solve(ind=0, t=2, ds=[2,2])
+// │   │   ├── PICK 2 → [4] solve(ind=0, t=0, ds=[2,2,2])
+// │   │   │   ├── PICK 2      ✂️ 2 > 0, skip
+// │   │   │   └── NOT-PICK → [5] solve(ind=1, t=0, ds=[2,2,2])
+// │   │   │       ├── PICK 3      ✂️ 3 > 0, skip
+// │   │   │       └── NOT-PICK → [6] solve(ind=2, t=0, ds=[2,2,2])
+// │   │   │                         ind==size, t==0 → ✅ FOUND [2,2,2]
+// │   │   │
+// │   │   │   (back in [3]: pop_back → ds = [2,2])
+// │   │   └── NOT-PICK → [7] solve(ind=1, t=2, ds=[2,2])
+// │   │       ├── PICK 3      ✂️ 3 > 2, skip
+// │   │       └── NOT-PICK → [8] solve(ind=2, t=2, ds=[2,2])
+// │   │                         ind==size, t!=0 → ❌
+// │   │
+// │   │   (back in [2]: pop_back → ds = [2])
+// │   └── NOT-PICK → [9] solve(ind=1, t=4, ds=[2])
+// │       ├── PICK 3 → [10] solve(ind=1, t=1, ds=[2,3])
+// │       │   ├── PICK 3      ✂️ 3 > 1, skip
+// │       │   └── NOT-PICK → [11] solve(ind=2, t=1, ds=[2,3])
+// │       │                     ind==size, t!=0 → ❌
+// │       │
+// │       │   (back in [9]: pop_back → ds = [2])
+// │       └── NOT-PICK → [12] solve(ind=2, t=4, ds=[2])
+// │                         ind==size, t!=0 → ❌
+// │
+// │   (back in [1]: pop_back → ds = [])
+// └── NOT-PICK → [13] solve(ind=1, t=6, ds=[])
+//     ├── PICK 3 → [14] solve(ind=1, t=3, ds=[3])
+//     │   ├── PICK 3 → [15] solve(ind=1, t=0, ds=[3,3])
+//     │   │   ├── PICK 3      ✂️ 3 > 0, skip
+//     │   │   └── NOT-PICK → [16] solve(ind=2, t=0, ds=[3,3])
+//     │   │                     ind==size, t==0 → ✅ FOUND [3,3]
+//     │   │
+//     │   │   (back in [14]: pop_back → ds = [3])
+//     │   └── NOT-PICK → [17] solve(ind=2, t=3, ds=[3])
+//     │                     ind==size, t!=0 → ❌
+//     │
+//     │   (back in [13]: pop_back → ds = [])
+//     └── NOT-PICK → [18] solve(ind=2, t=6, ds=[])
+//                       ind==size, t!=0 → ❌
+//
+// Total calls: 18     Leaves (ind==size): 7     Found: 2
+// Result: [[2,2,2], [3,3]]
 //
 // COMPARISON OF BOTH APPROACHES:
 // ------------------------------

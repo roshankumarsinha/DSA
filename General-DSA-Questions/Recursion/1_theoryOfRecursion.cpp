@@ -130,7 +130,7 @@
 //     }
 // }
 
-// Time Complexity : n*(2^n), n is to print all the elements in vector, so we will be javing 2^n vectors.
+// Time Complexity : n*(2^n), n is to print all the elements in vector, so we will be having 2^n vectors.
 
 // After this please study from Learn All Patterns of Subsequences (Theory).
 // Link : https://takeuforward.org/data-structure/learn-all-patterns-of-subsequences-theory
@@ -239,6 +239,34 @@
 //     }
 // };
 
+// Recursive tree for "check if subsequence with sum K exists"
+// Example: arr = [1,2,1], target = 2
+// Node format: (ind, sum, {ds})      [n] = order of the call
+//
+//                                    [1] (0,0,{ })
+//                               /                      \
+//                         take 1                        skip 1
+//                    [2] (1,1,{1})                   (1,0,{ })  ✂️ never called
+//                    /              \                  (root already got true from left)
+//               take 2               skip 2
+//        [3] (2,3,{1,2})          [6] (2,1,{1})
+//          /         \              /          \
+//      take 1       skip 1       take 1        skip 1
+// [4](3,4,{1,2,1}) [5](3,3,{1,2}) [7](3,2,{1,1}) (3,1,{1})  ✂️ never called
+//       ❌              ❌             ✅
+//     false           false         TRUE
+//
+// How the values travel back up:
+// [4] sum 4 != 2 → false
+// [5] sum 3 != 2 → false
+// [3] pick = false, skip = false → returns false to [2]
+// [7] sum 2 == 2 → returns TRUE        (ds = {1,1} is the answer)
+// [6] isAnsInPick = true → returns true right away, skip branch is never called
+// [2] isAnsInSkip = true → returns true
+// [1] isAnsInPick = true → returns true, right subtree (skip 1) is never called
+//
+// Only 7 calls instead of the 15 in the "find all" version.
+// That early return is the whole point of this version.
 
 
 // Question : One more modify version of this is to find count of how many subsequence matches the target.
@@ -274,6 +302,33 @@
 //         return findCombination(0, target, 0, nums);  // Start the recursive search, (index: 0, target, curr_sum: 0, nums: Given array)
 //     }
 // };
+
+// Recursive tree for "count subsequences with sum K"
+// Example: arr = [1,2,1], target = 2
+// Node format: (ind, sum)  → value returned to parent
+//
+//                                        (0,0) → 2
+//                              /                           \
+//                        take 1                             skip 1
+//                    (1,1) → 1                            (1,0) → 1
+//                   /         \                          /         \
+//             take 2           skip 2              take 2           skip 2
+//          (2,3) → 0         (2,1) → 1           (2,2) → 1         (2,0) → 0
+//          /      \           /      \            /      \          /      \
+//      take1    skip1     take1    skip1      take1    skip1    take1    skip1
+//     (3,4)     (3,3)     (3,2)    (3,1)      (3,3)    (3,2)    (3,1)    (3,0)
+//    {1,2,1}    {1,2}     {1,1}     {1}       {2,1}     {2}      {1}      { }
+//      → 0       → 0       → 1      → 0        → 0      → 1      → 0      → 0
+//      ❌        ❌        ✅       ❌         ❌       ✅       ❌       ❌
+//
+// How the counts travel back up (each node returns countInPick + countInSkip):
+// (2,3) = 0 + 0 = 0        (2,1) = 1 + 0 = 1
+// (2,2) = 0 + 1 = 1        (2,0) = 0 + 0 = 0
+// (1,1) = 0 + 1 = 1        (1,0) = 1 + 0 = 1
+// (0,0) = 1 + 1 = 2   →  Final answer: 2  ({1,1} and {2})
+//
+// No early return here: to count every answer we have to visit
+// every path, so all 15 calls run, the same as the "find all" version.
 
 // For all the above time complexity will be 2^n
 
